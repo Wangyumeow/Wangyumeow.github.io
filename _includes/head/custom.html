@@ -76,7 +76,8 @@
 </style>
 
 <script>
-  // Determine & apply language — inject dynamic CSS for bulletproof visibility control
+  // Determine & apply language — directly set inline style on DOM elements
+  // This is the HIGHEST CSS priority, no external stylesheet can override it
   (function() {
     var lang = (new URLSearchParams(window.location.search)).get('lang');
     if (!lang) { lang = localStorage.getItem('lang'); }
@@ -88,25 +89,35 @@
     }
     if (!lang || ['zh','en','ja'].indexOf(lang) < 0) lang = 'en';
 
-    // Set data-lang attribute for potential CSS use & button activation
+    // Set data-lang attribute
     document.documentElement.setAttribute('data-lang', lang);
 
-    // Create/update dynamic style to hide non-matching languages
-    var styleId = 'lang-style';
-    var styleEl = document.getElementById(styleId);
-    if (!styleEl) {
-      styleEl = document.createElement('style');
-      styleEl.id = styleId;
-      document.head.appendChild(styleEl);
-    }
-    var rules = {
-      zh: '.lang-en,.lang-ja{display:none!important}',
-      en: '.lang-zh,.lang-ja{display:none!important}',
-      ja: '.lang-zh,.lang-en{display:none!important}'
+    // Utility: apply visibility to ALL lang-tagged elements
+    window.setLangVisibility = function(lang) {
+      var allTags = ['zh','en','ja'];
+      allTags.forEach(function(tag) {
+        var els = document.querySelectorAll('.lang-' + tag);
+        for (var i = 0; i < els.length; i++) {
+          if (tag === lang) {
+            // Show: remove inline display style
+            els[i].style.removeProperty('display');
+          } else {
+            // Hide with !important inline style
+            els[i].style.setProperty('display', 'none', 'important');
+          }
+        }
+      });
     };
-    styleEl.textContent = rules[lang] || '';
 
-    // Store lang for masthead buttons
+    // Apply visibility immediately (DOM may not be fully ready,
+    // but style on head-level elements works; we also re-run on DOMContentLoaded)
+    window.setLangVisibility(lang);
+
+    // Re-run on DOM ready to catch all dynamically inserted elements
+    document.addEventListener('DOMContentLoaded', function() {
+      window.setLangVisibility(document.documentElement.getAttribute('data-lang'));
+    });
+
     window._currentLang = lang;
   })();
 </script>

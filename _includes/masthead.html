@@ -55,16 +55,18 @@
         html.setAttribute('data-lang', lang);
         localStorage.setItem('lang', lang);
 
-        // Update dynamic style to hide non-matching languages
-        var styleEl = document.getElementById('lang-style');
-        if (styleEl) {
-          var rules = {
-            zh: '.lang-en,.lang-ja{display:none!important}',
-            en: '.lang-zh,.lang-ja{display:none!important}',
-            ja: '.lang-zh,.lang-en{display:none!important}'
-          };
-          styleEl.textContent = rules[lang] || '';
-        }
+        // Use inline style (highest CSS priority) to control visibility
+        var allTags = ['zh','en','ja'];
+        allTags.forEach(function(tag) {
+          var els = document.querySelectorAll('.lang-' + tag);
+          for (var i = 0; i < els.length; i++) {
+            if (tag === lang) {
+              els[i].style.removeProperty('display');
+            } else {
+              els[i].style.setProperty('display', 'none', 'important');
+            }
+          }
+        });
 
         // Update active state
         buttons.forEach(function(b) { b.classList.remove('active'); });
