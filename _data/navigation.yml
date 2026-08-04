@@ -1,18 +1,15 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
+# 导航栏链接顺序 · Navigation · ナビゲーション
+# Each title uses HTML span tags with lang-* classes for trilingual display
 
 main:
-  - title: "学术成果"
+  - title: '<span class="lang-zh">学术成果</span><span class="lang-en">Publications</span><span class="lang-ja">研究業績</span>'
     url: /publications/
 
-  - title: "会议报告"
+  - title: '<span class="lang-zh">会议报告</span><span class="lang-en">Talks</span><span class="lang-ja">学会発表</span>'
     url: /talks/
 
-  - title: "实践项目"
+  - title: '<span class="lang-zh">实践项目</span><span class="lang-en">Projects</span><span class="lang-ja">プロジェクト</span>'
     url: /portfolio/
 
-  - title: "CV"
+  - title: '<span class="lang-zh">CV</span><span class="lang-en">CV</span><span class="lang-ja">履歴書</span>'
     url: /cv/
