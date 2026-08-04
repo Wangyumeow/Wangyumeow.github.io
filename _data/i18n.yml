@@ -1,0 +1,105 @@
+# i18n — 三语标签库
+# Use in templates: {{ site.data.i18n[page.lang].label_key }}
+# Or with data-lang: <span class="lang-zh">中文</span><span class="lang-en">English</span>
+
+nav:
+  publications:
+    zh: "学术成果"
+    en: "Publications"
+    ja: "研究業績"
+  talks:
+    zh: "会议报告"
+    en: "Talks"
+    ja: "学会発表"
+  portfolio:
+    zh: "实践项目"
+    en: "Projects"
+    ja: "プロジェクト"
+  cv:
+    zh: "CV"
+    en: "CV"
+    ja: "履歴書"
+  teaching:
+    zh: "教学"
+    en: "Teaching"
+    ja: "教育"
+
+author:
+  location:
+    zh: "上海"
+    en: "Shanghai"
+    ja: "上海"
+
+home:
+  title:
+    zh: "关于我"
+    en: "About"
+    ja: "自己紹介"
+  education:
+    zh: "教育背景"
+    en: "Education"
+    ja: "学歴"
+  research:
+    zh: "研究方向"
+    en: "Research Interests"
+    ja: "研究分野"
+
+publications:
+  heading:
+    zh: "学术成果"
+    en: "Publications"
+    ja: "研究業績"
+  abstract:
+    zh: "摘要"
+    en: "Abstract"
+    ja: "要旨"
+  cite:
+    zh: "引用"
+    en: "Cite"
+    ja: "引用"
+  download:
+    zh: "下载"
+    en: "Download"
+    ja: "ダウンロード"
+
+talks:
+  heading:
+    zh: "会议报告"
+    en: "Talks & Presentations"
+    ja: "学会発表"
+  venue:
+    zh: "会议"
+    en: "Venue"
+    ja: "会議"
+  date:
+    zh: "日期"
+    en: "Date"
+    ja: "日付"
+
+portfolio:
+  heading:
+    zh: "实践项目"
+    en: "Projects"
+    ja: "プロジェクト"
+
+teaching:
+  heading:
+    zh: "教学经历"
+    en: "Teaching"
+    ja: "教育経験"
+
+cv:
+  heading:
+    zh: "个人简历"
+    en: "Curriculum Vitae"
+    ja: "履歴書"
+  download:
+    zh: "下载 PDF"
+    en: "Download PDF"
+    ja: "PDFダウンロード"
+
+footer:
+  copyright:
+    zh: "保留所有权利"
+    en: "All rights reserved"
+    ja: "無断転載禁止"
