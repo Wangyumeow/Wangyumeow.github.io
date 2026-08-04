@@ -1,18 +1,14 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
+# Navigation links - bilingual (Chinese / English)
 
 main:
-  - title: "学术成果"
+  - title: "学术成果 Publications"
     url: /publications/
 
-  - title: "会议报告"
+  - title: "会议报告 Talks"
     url: /talks/
 
-  - title: "实践项目"
+  - title: "实践项目 Projects"
     url: /portfolio/
 
-  - title: "CV"
+  - title: "简历 CV"
     url: /cv/
