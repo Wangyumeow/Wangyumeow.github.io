@@ -31,12 +31,24 @@
   html[data-lang="ja"] .lang-zh,
   html[data-lang="ja"] .lang-en { display: none !important; }
 
+  /* --- Masthead flex layout (lang-switcher outside greedy-nav) --- */
+  .masthead__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #site-nav {
+    flex: 1;
+    min-width: 0;
+  }
   /* --- Language switcher buttons --- */
   .lang-switcher {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    margin-left: 0.5em;
+    margin-left: 12px;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
   .lang-switcher .lang-btn {
     display: inline-flex;
