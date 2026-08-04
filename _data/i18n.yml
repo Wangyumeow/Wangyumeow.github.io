@@ -1,105 +1,39 @@
-# i18n — 三语标签库
-# Use in templates: {{ site.data.i18n[page.lang].label_key }}
-# Or with data-lang: <span class="lang-zh">中文</span><span class="lang-en">English</span>
+# UI text translations: zh / en / ja
+zh:
+  site_title: "王宇傲 Wang Yu'ao"
+  publications: "学术成果"
+  talks: "会议报告"
+  portfolio: "实践项目"
+  cv: "简历"
+  about: "关于"
+  education: "教育背景"
+  research: "研究方向"
+  contact: "联系方式"
+  footer_powered: "本站基于"
+  follow: "关注"
 
-nav:
-  publications:
-    zh: "学术成果"
-    en: "Publications"
-    ja: "研究業績"
-  talks:
-    zh: "会议报告"
-    en: "Talks"
-    ja: "学会発表"
-  portfolio:
-    zh: "实践项目"
-    en: "Projects"
-    ja: "プロジェクト"
-  cv:
-    zh: "CV"
-    en: "CV"
-    ja: "履歴書"
-  teaching:
-    zh: "教学"
-    en: "Teaching"
-    ja: "教育"
+en:
+  site_title: "Wang Yu'ao"
+  publications: "Publications"
+  talks: "Talks"
+  portfolio: "Projects"
+  cv: "CV"
+  about: "About"
+  education: "Education"
+  research: "Research Interests"
+  contact: "Contact"
+  footer_powered: "Powered by"
+  follow: "Follow"
 
-author:
-  location:
-    zh: "上海"
-    en: "Shanghai"
-    ja: "上海"
-
-home:
-  title:
-    zh: "关于我"
-    en: "About"
-    ja: "自己紹介"
-  education:
-    zh: "教育背景"
-    en: "Education"
-    ja: "学歴"
-  research:
-    zh: "研究方向"
-    en: "Research Interests"
-    ja: "研究分野"
-
-publications:
-  heading:
-    zh: "学术成果"
-    en: "Publications"
-    ja: "研究業績"
-  abstract:
-    zh: "摘要"
-    en: "Abstract"
-    ja: "要旨"
-  cite:
-    zh: "引用"
-    en: "Cite"
-    ja: "引用"
-  download:
-    zh: "下载"
-    en: "Download"
-    ja: "ダウンロード"
-
-talks:
-  heading:
-    zh: "会议报告"
-    en: "Talks & Presentations"
-    ja: "学会発表"
-  venue:
-    zh: "会议"
-    en: "Venue"
-    ja: "会議"
-  date:
-    zh: "日期"
-    en: "Date"
-    ja: "日付"
-
-portfolio:
-  heading:
-    zh: "实践项目"
-    en: "Projects"
-    ja: "プロジェクト"
-
-teaching:
-  heading:
-    zh: "教学经历"
-    en: "Teaching"
-    ja: "教育経験"
-
-cv:
-  heading:
-    zh: "个人简历"
-    en: "Curriculum Vitae"
-    ja: "履歴書"
-  download:
-    zh: "下载 PDF"
-    en: "Download PDF"
-    ja: "PDFダウンロード"
-
-footer:
-  copyright:
-    zh: "保留所有权利"
-    en: "All rights reserved"
-    ja: "無断転載禁止"
+ja:
+  site_title: "王宇傲 Wang Yu'ao"
+  publications: "研究業績"
+  talks: "学会報告"
+  portfolio: "プロジェクト"
+  cv: "履歴書"
+  about: "概要"
+  education: "学歴"
+  research: "研究分野"
+  contact: "連絡先"
+  footer_powered: "Powered by"
+  follow: "フォロー"

@@ -11,8 +11,8 @@ locale                   : "zh-CN"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "王宇傲 - Wang Yu'ao"
 title_separator          : "-"
-name                     : &name "王宇傲"
-description              : &description "王宇傲的学术主页 — 复旦大学国际政治与国际传播专业硕士研究生"
+name                     : "王宇傲"
+description              : "王宇傲的学术主页 — 复旦大学国际政治与国际传播专业硕士研究生"
 url                      : https://Wangyumeow.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "王宇傲 Wang Yu'ao"
   pronouns         : "he/him"
-  bio              : '<span class="lang-zh">复旦大学国际政治—国际传播硕士研究生，研究日本问题与国际治理议题</span><span class="lang-en">M.A. student in International Politics & Communication at Fudan University, researching Japanese studies and international governance</span><span class="lang-ja">復旦大学国際政治・国際コミュニケーション専攻修士課程。日本研究と国際ガバナンスを専攻</span>'
+  bio              : '<span class="lang-zh">复旦大学国际政治—国际传播硕士研究生</span><span class="lang-en">M.A. Student, International Politics & International Communication, Fudan University</span><span class="lang-ja">復旦大学国際政治・国際コミュニケーション専攻 修士課程</span>'
   location         : '<span class="lang-zh">上海</span><span class="lang-en">Shanghai</span><span class="lang-ja">上海</span>'
-  employer         : "复旦大学"
+  employer         : '<span class="lang-zh">复旦大学</span><span class="lang-en">Fudan University</span><span class="lang-ja">復旦大学</span>'
   uri              : # URL
   email            : "Jasonwong_011003@163.com" 
 
@@ -84,12 +84,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  conferences:
-    title: '<span class="lang-zh">会议论文</span><span class="lang-en">Conference Papers</span><span class="lang-ja">会議論文</span>'
+  books:
+    title: '<span class="lang-zh">书籍与报刊</span><span class="lang-en">Books &amp; Press</span><span class="lang-ja">書籍・新聞</span>'
   manuscripts:
-    title: '<span class="lang-zh">期刊文章</span><span class="lang-en">Journal Articles</span><span class="lang-ja">学術論文</span>'
-  commentaries:
-    title: '<span class="lang-zh">报刊评论</span><span class="lang-en">Commentaries</span><span class="lang-ja">新聞論評</span>'
+    title: '<span class="lang-zh">学术论文</span><span class="lang-en">Journal Articles</span><span class="lang-ja">学術論文</span>'
+  conferences:
+    title: '<span class="lang-zh">会议论文</span><span class="lang-en">Conference Papers</span><span class="lang-ja">学会発表論文</span>'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -138,7 +138,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -164,6 +164,7 @@ analytics:
 include:
   - .htaccess
   - _pages
+  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -220,9 +221,6 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
@@ -236,17 +234,6 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -254,15 +241,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _publications
   - scope:
       path: ""

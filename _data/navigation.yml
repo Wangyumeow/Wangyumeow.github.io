@@ -1,15 +1,14 @@
-# 导航栏链接顺序 · Navigation · ナビゲーション
-# Each title uses HTML span tags with lang-* classes for trilingual display
+# Navigation links - trilingual (Chinese / English / Japanese)
 
 main:
   - title: '<span class="lang-zh">学术成果</span><span class="lang-en">Publications</span><span class="lang-ja">研究業績</span>'
     url: /publications/
 
-  - title: '<span class="lang-zh">会议报告</span><span class="lang-en">Talks</span><span class="lang-ja">学会発表</span>'
+  - title: '<span class="lang-zh">会议报告</span><span class="lang-en">Talks</span><span class="lang-ja">学会報告</span>'
     url: /talks/
 
   - title: '<span class="lang-zh">实践项目</span><span class="lang-en">Projects</span><span class="lang-ja">プロジェクト</span>'
     url: /portfolio/
 
-  - title: '<span class="lang-zh">CV</span><span class="lang-en">CV</span><span class="lang-ja">履歴書</span>'
+  - title: '<span class="lang-zh">简历</span><span class="lang-en">CV</span><span class="lang-ja">履歴書</span>'
     url: /cv/

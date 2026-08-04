@@ -1,0 +1,29 @@
+---
+title: '<span class="lang-zh">日本右倾化与媒体不信任：从传统媒体到社交媒体的动员</span><span class="lang-en">Japan''s Rightward Shift and Media Distrust: Mobilization from Traditional to Social Media</span><span class="lang-ja">日本の右傾化とメディア不信：伝統メディアからソーシャルメディアへの動員</span>'
+collection: publications
+category: conferences
+permalink: /publication/2026-03-01-japan-rightward-media-distrust
+excerpt: '<span class="lang-zh">以2026年日本众议院选举为切入点，探讨日本社会"右倾化"、媒体不信任以及社交媒体政治动员三者之间的内在关联。获论坛论文三等奖。</span><span class="lang-en">Third Prize paper at the 2nd Beijing-Tianjin-Hebei Graduate Forum on Japanese Studies.</span><span class="lang-ja">第2回京津冀日本学研究大学院生フォーラム三等賞受賞論文。</span>'
+date: 2026-03-01
+venue: '<span class="lang-zh">第二届京津冀日本学研究硕博论坛</span><span class="lang-en">2nd Beijing-Tianjin-Hebei Graduate Forum on Japanese Studies</span><span class="lang-ja">第2回京津冀日本学研究大学院生フォーラム</span>'
+paperurl: ''
+citation: '<span class="lang-zh">王宇傲. (2026). "日本右倾化与媒体不信任：从传统媒体到社交媒体的动员." <i>第二届京津冀日本学研究硕博论坛</i>. (论文三等奖)</span><span class="lang-en">Wang, Y. (2026). "Japan''s Rightward Shift and Media Distrust: Mobilization from Traditional to Social Media." <i>2nd Beijing-Tianjin-Hebei Graduate Forum on Japanese Studies</i>. (Third Prize)</span><span class="lang-ja">王宇傲. (2026). 「日本の右傾化とメディア不信：伝統メディアからソーシャルメディアへの動員」. <i>第2回京津冀日本学研究大学院生フォーラム</i>. (三等賞)</span>'
+---
+
+<span class="lang-zh">
+2026年日本众议院选举呈现出一种反常规的政治现象：传统媒体并不看好高市早苗，而高市却带领自民党取得大胜，由此折射出日本政治与媒体生态正在经历深刻的转变。
+
+本文以此次大选为切入点，探讨日本社会"右倾化"、媒体不信任以及社交媒体政治动员这三者之间的内在关联。本论文在第二届京津冀日本学研究硕博论坛获三等奖，目前在完善当中，准备投稿期刊。
+</span>
+
+<span class="lang-en">
+The 2026 Japanese general election presented an unusual political phenomenon: traditional media did not favor Sanae Takaichi, yet she led the LDP to a landslide victory, reflecting profound shifts in Japan's political and media landscape.
+
+This paper examines the interplay among Japan's "rightward shift," media distrust, and social media political mobilization. It won Third Prize at the 2nd Beijing-Tianjin-Hebei Graduate Forum on Japanese Studies and is currently being prepared for journal submission.
+</span>
+
+<span class="lang-ja">
+2026年の日本の衆議院選挙は、異例の政治現象を示しました。伝統メディアは高市早苗氏に好意的ではなかったにもかかわらず、高市氏は自民党を大勝利に導き、日本の政治とメディアのエコシステムが深い変容を遂げていることを浮き彫りにしました。
+
+本稿はこの選挙を切り口に、日本社会の「右傾化」、メディア不信、そしてソーシャルメディアによる政治的動員の三者の内的関連性を検討します。本論文は第2回京津冀日本学研究大学院生フォーラムで三等賞を受賞し、現在ジャーナル投稿に向けて改稿中です。
+</span>

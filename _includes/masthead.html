@@ -24,7 +24,8 @@
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
-      <!-- Language switcher OUTSIDE greedy-nav to avoid being eaten by greedy navigation JS -->
+
+      <!-- Language switcher OUTSIDE greedy-nav to prevent JS destruction -->
       <div class="lang-switcher">
         <button class="lang-btn" data-lang="zh" aria-label="中文">中</button>
         <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
@@ -33,3 +34,31 @@
     </div>
   </div>
 </div>
+
+<script>
+  // Language switcher click handler
+  (function() {
+    var buttons = document.querySelectorAll('.lang-btn');
+    var html = document.documentElement;
+    var currentLang = html.getAttribute('data-lang') || 'zh';
+
+    // Set active button on load
+    buttons.forEach(function(btn) {
+      if (btn.getAttribute('data-lang') === currentLang) {
+        btn.classList.add('active');
+      }
+    });
+
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lang = this.getAttribute('data-lang');
+        html.setAttribute('data-lang', lang);
+        localStorage.setItem('lang', lang);
+
+        // Update active state
+        buttons.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+  })();
+</script>

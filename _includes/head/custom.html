@@ -10,7 +10,7 @@
 <!-- Support for Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
+<!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
@@ -19,123 +19,83 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
-<!-- ===================================================================== -->
-<!-- Language Switcher — inline critical CSS + JS (prevents FOUC)          -->
-<!-- ===================================================================== -->
+<!-- Language Switcher Styles -->
 <style>
-  /* --- Visibility by language (critical, loaded before render) --- */
-  html[data-lang="zh"] .lang-en,
-  html[data-lang="zh"] .lang-ja { display: none !important; }
-  html[data-lang="en"] .lang-zh,
-  html[data-lang="en"] .lang-ja { display: none !important; }
-  html[data-lang="ja"] .lang-zh,
-  html[data-lang="ja"] .lang-en { display: none !important; }
+  /* --- Language switcher buttons --- */
+  .lang-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+  .lang-btn {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    background: transparent;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-family: inherit;
+  }
+  .lang-btn:hover {
+    border-color: #666;
+    color: #222;
+    background: rgba(0,0,0,0.04);
+  }
+  .lang-btn.active {
+    background: #494e52;
+    color: #fff;
+    border-color: #494e52;
+  }
 
-  /* --- Masthead flex layout (lang-switcher outside greedy-nav) --- */
+  /* --- Language visibility rules --- */
+  /* Default: show all (no-JS fallback) */
+  [data-lang="zh"] .lang-en,
+  [data-lang="zh"] .lang-ja { display: none !important; }
+  [data-lang="en"] .lang-zh,
+  [data-lang="en"] .lang-ja { display: none !important; }
+  [data-lang="ja"] .lang-zh,
+  [data-lang="ja"] .lang-en { display: none !important; }
+
+  /* Masthead menu flex layout for lang switcher */
   .masthead__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  #site-nav {
-    flex: 1;
-    min-width: 0;
-  }
-  /* --- Language switcher buttons --- */
-  .lang-switcher {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin-left: 12px;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-  .lang-switcher .lang-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 32px;
-    height: 28px;
-    padding: 0 8px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1;
-    color: #666;
-    text-decoration: none;
-    border: 1px solid #ccc;
-    border-radius: 14px;
-    background: #fff;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
-  .lang-switcher .lang-btn:hover {
-    color: #333;
-    background: #f0f0f0;
-    border-color: #999;
-  }
-  .lang-switcher .lang-btn.active {
-    color: #fff;
-    background: #2c3e50;
-    border-color: #2c3e50;
-  }
-  /* Dark theme overrides */
-  [data-theme="dark"] .lang-switcher .lang-btn {
-    color: #bbb;
-    border-color: #555;
-    background: #222;
-  }
-  [data-theme="dark"] .lang-switcher .lang-btn:hover {
-    color: #fff;
-    background: #333;
-    border-color: #777;
-  }
-  [data-theme="dark"] .lang-switcher .lang-btn.active {
-    color: #fff;
-    background: #4a7fb5;
-    border-color: #4a7fb5;
-  }
-  /* Responsive */
+
+  /* Responsive: hide lang switcher on narrow screens */
   @media (max-width: 600px) {
-    .lang-switcher .lang-btn {
-      min-width: 26px;
-      height: 24px;
-      padding: 0 6px;
-      font-size: 11px;
-      border-radius: 12px;
+    .lang-switcher {
+      display: none;
     }
   }
 </style>
 
 <script>
-  /* Immediate language detection — runs before any CSS paint */
+  // Set language attribute immediately to prevent flash-of-all-languages
   (function() {
-    var SUPPORTED = ['zh','en','ja'];
-    var DEFAULT = 'zh';
-    var STORAGE_KEY = 'site-lang';
-
-    function detect() {
-      var params = new URLSearchParams(window.location.search);
-      var urlLang = params.get('lang');
-      if (urlLang && SUPPORTED.indexOf(urlLang) !== -1) {
-        try { localStorage.setItem(STORAGE_KEY, urlLang); } catch(e) {}
-        return urlLang;
-      }
-      try {
-        var stored = localStorage.getItem(STORAGE_KEY);
-        if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
-      } catch(e) {}
-      var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (nav.indexOf('zh') === 0) return 'zh';
-      if (nav.indexOf('ja') === 0) return 'ja';
-      return 'en';
+    var lang = (new URLSearchParams(window.location.search)).get('lang');
+    if (!lang) {
+      lang = localStorage.getItem('lang');
     }
-
-    document.documentElement.setAttribute('data-lang', detect());
+    if (!lang && navigator.language) {
+      var bl = navigator.language.toLowerCase();
+      if (bl.startsWith('zh')) lang = 'zh';
+      else if (bl.startsWith('ja')) lang = 'ja';
+      else lang = 'en';
+    }
+    if (lang && ['zh','en','ja'].indexOf(lang) >= 0) {
+      document.documentElement.setAttribute('data-lang', lang);
+    }
   })();
 </script>
-
-<!-- Full language switcher logic (loaded after DOM) -->
-<script src="{{ base_path }}/assets/js/lang-switcher.js"></script>
 
 <!-- end custom head snippets -->
