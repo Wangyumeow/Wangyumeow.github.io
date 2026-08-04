@@ -1,152 +1,246 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "王宇傲",
+    "email": "Jasonwong_011003@163.com",
+    "phone": "18043136558",
+    "website": "https://Wangyumeow.github.io",
+    "summary": "复旦大学国际政治—国际传播专业硕士研究生。研究日本问题与国际治理议题，兼具新闻学跨学科背景，在人力资源、行政党务与媒体运营领域有丰富实践经验。",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "上海",
+      "countryCode": "CN",
+      "region": "上海"
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "Wangyumeow",
+        "url": "https://github.com/Wangyumeow"
       }
     ]
   },
-  "work": [],
-  "education": [
+  "work": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "name": "复旦大学国际关系与公共事务学院",
+      "position": "科研中心与党务中心助理",
+      "website": "",
+      "startDate": "2026-03",
+      "endDate": "2026-07",
+      "summary": "协助学院科研服务与党务工作",
+      "highlights": [
+        "负责项目管理、文案写作、会议记录整理",
+        "协助学院第四次党代会会务支持（PPT、座位图、工作证设计、议程安排）",
+        "协助学校文科处参与国家社科基金项目申报和审核"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
+      "name": "复旦大学党委宣传部融媒体中心",
+      "position": "视频部记者/策划",
+      "website": "",
+      "startDate": "2025-06",
+      "endDate": "",
+      "summary": "负责复旦学生官方博客策划与内容创作",
+      "highlights": [
+        "策划复旦学生官方博客"旦问研究所"，已制作3-5期",
+        "参与广播台与融媒体中心共创项目"旦夕之声""
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "name": "上海御微半导体科技有限公司",
+      "position": "人力资源部招聘实习生",
+      "website": "",
+      "startDate": "2025-06",
+      "endDate": "2025-09",
+      "summary": "负责重点岗位简历Sourcing与面试安排",
+      "highlights": [
+        "重点负责Overlay、MSI岗位的简历Sourcing和预约面试",
+        "平均周约面10+，最终入职高级算法工程师1人、高级光学工程师1人"
+      ]
+    },
+    {
+      "name": "上海哔哩哔哩科技有限公司",
+      "position": "人力资源部实习生",
+      "website": "",
+      "startDate": "2025-02",
+      "endDate": "2025-06",
+      "summary": "负责2026届暑期实习生项目及日常社招",
+      "highlights": [
+        "负责商业技术中心6个岗位共20个HC招聘，转正率100%",
+        "共计约面550+，初面转化率34.4%，终面转化率41.9%",
+        "完成FPS游戏内容运营等4个实习生HC招聘",
+        "参与对叠纸游戏的Mapping探索"
+      ]
+    },
+    {
+      "name": "香港贸易发展局",
+      "position": "商贸对接",
+      "website": "",
+      "startDate": "2024-11",
+      "endDate": "2024-11",
+      "summary": "第八届进博会香港馆商贸对接",
+      "highlights": [
+        "累计对接40+人次，服务时长60小时",
+        "对接对象包括得物、绿地集团、葡语国家企业家联合会等"
+      ]
+    },
+    {
+      "name": "华住集团",
+      "position": "组织效能实习生",
+      "website": "",
+      "startDate": "2024-07",
+      "endDate": "2024-10",
+      "summary": "组织人才中心组织效能岗位",
+      "highlights": [
+        "华住新员工全局融入项目，覆盖全国14个品牌近万家门店",
+        "内部看板调整，形成双周报—月报部门会议和看板行动机制"
+      ]
+    },
+    {
+      "name": "中芯国际集成电路制造（上海）有限公司",
+      "position": "HR服务实习生",
+      "website": "",
+      "startDate": "2023-06",
+      "endDate": "2023-09",
+      "summary": "人事档案电子化项目",
+      "highlights": [
+        "设计并参与集团及上海分部人事档案电子化项目，制定覆盖4个分部的SOP",
+        "承担整组20%以上工作量，优化每日及每周工作量调配"
+      ]
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
+  "education": [
+    {
+      "institution": "复旦大学",
+      "area": "国际政治—国际传播",
+      "studyType": "硕士（学术学位）",
+      "startDate": "2025-09",
+      "endDate": "2028-06",
+      "gpa": null,
+      "courses": [
+        "推荐免试入学",
+        "国际关系与公共事务学院（学籍单位）与国际传播与全球领导力学院（培养单位）联合培养",
+        "关注领域：日本问题研究、国际治理议题研究"
+      ]
+    },
+    {
+      "institution": "复旦大学",
+      "area": "国际政治（辅修新闻学）",
+      "studyType": "本科（法学学士）",
+      "startDate": "2021-09",
+      "endDate": "2025-06",
+      "gpa": null,
+      "courses": [
+        "辅修新闻学专业",
+        "优秀学生二等奖学金×1、三等奖学金×2",
+        "复旦大学优秀学生、优秀毕业生"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Adobe系列",
+      "level": "熟练",
+      "keywords": ["Premiere Pro", "After Effects", "Photoshop", "Illustrator", "Audition"]
+    },
+    {
+      "name": "办公工具",
+      "level": "熟练",
+      "keywords": ["MS Office", "Canva", "剪映"]
+    },
+    {
+      "name": "语言能力",
+      "level": "",
+      "keywords": ["中文（母语）", "英语 CET-6"]
+    },
+    {
+      "name": "其他",
+      "level": "",
+      "keywords": ["AIGC工具使用", "招聘全流程管理", "项目管理", "内容策划与品牌运营"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "中文",
+      "fluency": "母语"
+    },
+    {
+      "language": "英语",
+      "fluency": "CET-6"
+    }
+  ],
+  "interests": [
+    {
+      "name": "日本问题研究",
+      "keywords": ["日本国际传播", "日本国内政治", "日本国际政治"]
+    },
+    {
+      "name": "国际治理议题",
+      "keywords": ["环境与国际政治", "国际传播话语", "国家形象"]
+    }
+  ],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "日本积极设定防卫费增额目标的三大动因",
+      "publisher": "新民晚报",
+      "releaseDate": "2026-05-28",
+      "website": "",
+      "summary": "与导师合作撰写，对日本最近的军事行为和动向进行跟踪和反馈，刊于新民晚报16版"新民环球/论坛"。"
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "日本右倾化与媒体不信任：从传统媒体到社交媒体的动员",
+      "publisher": "第二届京津冀日本学研究硕博论坛",
+      "releaseDate": "2026-03",
+      "website": "",
+      "summary": "以2026年日本众议院选举为切入点，探讨日本社会"右倾化"、媒体不信任以及社交媒体政治动员三者之间的内在关联。获论坛论文三等奖。"
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "气候治理中的跨国城市网络的发展差异研究——对C40与全球市长联盟的比较",
+      "publisher": "复旦大学本科毕业论文",
+      "releaseDate": "2025-06",
+      "website": "",
+      "summary": "重点介绍跨国城市网络，对C40和全球市长联盟（GCoM）的不同特点进行比较，通过分析网络中的节点和路径差异，探讨这些网络对全球气候治理发展的影响。"
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "name": "日本右倾化与媒体不信任：从传统媒体到社交媒体的动员",
+      "event": "中国特色大国外交视域下日本学研究前沿论坛暨第二届京津冀日本学研究硕博论坛",
+      "date": "2026-03",
+      "location": "中国",
+      "description": "论文获三等奖，目前正在完善并准备投稿期刊。"
     }
   ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
+  "teaching": [],
   "portfolio": [
     {
-      "name": "Portfolio item number 1",
+      "name": "旦问研究所",
       "category": "portfolio",
-      "date": "",
+      "date": "2025-06",
       "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "description": "复旦学生官方博客品牌栏目，负责策划与制作，目前已制作3-5期。"
+    },
+    {
+      "name": "旦夕之声",
+      "category": "portfolio",
+      "date": "2025-06",
+      "url": "",
+      "description": "复旦大学广播台与党委宣传部融媒体中心共创项目。"
+    },
+    {
+      "name": "复旦大学声音剧场",
+      "category": "portfolio",
+      "date": "2026-01",
+      "url": "",
+      "description": "担任宣传负责人兼前台导演，负责海报、文创、门票设计，宣传覆盖400+人次。"
+    },
+    {
+      "name": "复旦大学广播台《圆桌派》",
+      "category": "portfolio",
+      "date": "2023-09",
+      "url": "",
+      "description": "主导节目制作，最高浏览量突破1000，内容多次被复旦大学官微采用。承办第九届广播新人赛，线上互动量达9000+次。"
     }
   ]
 }
