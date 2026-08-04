@@ -5,6 +5,7 @@ permalink: /publication/2026-05-japan-defense-spending
 excerpt: '<span class="lang-zh">与导师合作撰写，对日本近年军事政策动向进行跟踪分析，刊于《新民晚报》2026年5月28日第16版"新民环球/论坛"。</span><span class="lang-en">Co-authored commentary tracking and analyzing Japan&apos;s recent military policy developments, published in <i>Xinmin Evening News</i>, May 28, 2026.</span><span class="lang-ja">指導教員との共著論評。日本の近年の軍事政策動向を追跡分析し、『新民晚報』2026年5月28日第16版に掲載。</span>'
 date: 2026-05-28
 venue: "新民晚报"
+category: commentaries
 citation: "<span class=\"lang-zh\">与导师合作. (2026). 日本积极设定防卫费增额目标的三大动因. <i>新民晚报</i>, 5月28日, 第16版.</span><span class=\"lang-en\">with advisor. (2026). Three Drivers Behind Japan's Defense Spending Increase. <i>Xinmin Evening News</i>, May 28, p.16.</span><span class=\"lang-ja\">指導教員との共著. (2026). 日本の防衛費増額目標設定の三つの動因. <i>新民晚報</i>, 5月28日, 16面.</span>"
 paperurl: ''
 ---

@@ -5,6 +5,7 @@ permalink: /publication/2026-03-japan-rightward-shift
 excerpt: '<span class="lang-zh">以2026年日本众议院选举为切入点，探讨日本社会右倾化、媒体不信任以及社交媒体政治动员三者之间的内在关联。获第二届京津冀日本学研究硕博论坛三等奖。</span><span class="lang-en">Examining the 2026 Japanese general election as a case study, this paper explores the interconnections between societal rightward shift, media distrust, and social media political mobilization. Won Third Prize at the 2nd Beijing-Tianjin-Hebei Japan Studies Forum.</span><span class="lang-ja">2026年衆議院選挙を事例に、日本社会の右傾化、メディア不信、ソーシャルメディアによる政治的動員の三者間の内的関連性を探求。第2回京津冀日本学研究修士・博士フォーラムにて三等賞受賞。</span>'
 date: 2026-03-15
 venue: "第二届京津冀日本学研究硕博论坛"
+category: conferences
 citation: "<span class=\"lang-zh\">王宇傲. (2026). 日本右倾化与媒体不信任：从传统媒体到社交媒体的动员. 第二届京津冀日本学研究硕博论坛, 三等奖.</span><span class=\"lang-en\">Wang Yu'ao. (2026). Japan's Rightward Shift and Media Distrust: Mobilization from Traditional to Social Media. 2nd Beijing-Tianjin-Hebei Japan Studies Forum, Third Prize.</span><span class=\"lang-ja\">王宇傲. (2026). 日本の右傾化とメディア不信：伝統メディアからソーシャルメディアへの動員. 第2回京津冀日本学研究修士・博士フォーラム, 三等賞.</span>"
 paperurl: ''
 ---

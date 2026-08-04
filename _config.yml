@@ -84,12 +84,12 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
   conferences:
-    title: 'Conference Papers'
+    title: '<span class="lang-zh">会议论文</span><span class="lang-en">Conference Papers</span><span class="lang-ja">会議論文</span>'
+  manuscripts:
+    title: '<span class="lang-zh">期刊文章</span><span class="lang-en">Journal Articles</span><span class="lang-ja">学術論文</span>'
+  commentaries:
+    title: '<span class="lang-zh">报刊评论</span><span class="lang-en">Commentaries</span><span class="lang-ja">新聞論評</span>'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
