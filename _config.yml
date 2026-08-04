@@ -11,8 +11,8 @@ locale                   : "zh-CN"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "王宇傲 - Wang Yu'ao"
 title_separator          : "-"
-name                     : &name "王宇傲"
-description              : &description "王宇傲的学术主页 — 复旦大学国际政治与国际传播专业硕士研究生"
+name                     : "王宇傲"
+description              : "王宇傲的学术主页 — 复旦大学国际政治与国际传播专业硕士研究生"
 url                      : https://Wangyumeow.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -138,7 +138,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               :
 facebook:
   username               :
   app_id                 :
