@@ -55,14 +55,10 @@
     border-color: #494e52;
   }
 
-  /* --- Language visibility rules --- */
-  /* Default: show all (no-JS fallback) */
-  [data-lang="zh"] .lang-en,
-  [data-lang="zh"] .lang-ja { display: none !important; }
-  [data-lang="en"] .lang-zh,
-  [data-lang="en"] .lang-ja { display: none !important; }
-  [data-lang="ja"] .lang-zh,
-  [data-lang="ja"] .lang-en { display: none !important; }
+  /* No-JS fallback: when html has no data-lang yet, show all.
+     Once lang-style is injected by JS, visibility is controlled. */
+  html:not([data-lang]) .lang-en,
+  html:not([data-lang]) .lang-ja { /* show all on no-JS */ }
 
   /* Masthead menu flex layout for lang switcher */
   .masthead__menu {
@@ -80,21 +76,38 @@
 </style>
 
 <script>
-  // Set language attribute immediately to prevent flash-of-all-languages
+  // Determine & apply language — inject dynamic CSS for bulletproof visibility control
   (function() {
     var lang = (new URLSearchParams(window.location.search)).get('lang');
-    if (!lang) {
-      lang = localStorage.getItem('lang');
-    }
+    if (!lang) { lang = localStorage.getItem('lang'); }
     if (!lang && navigator.language) {
       var bl = navigator.language.toLowerCase();
       if (bl.startsWith('zh')) lang = 'zh';
       else if (bl.startsWith('ja')) lang = 'ja';
       else lang = 'en';
     }
-    if (lang && ['zh','en','ja'].indexOf(lang) >= 0) {
-      document.documentElement.setAttribute('data-lang', lang);
+    if (!lang || ['zh','en','ja'].indexOf(lang) < 0) lang = 'en';
+
+    // Set data-lang attribute for potential CSS use & button activation
+    document.documentElement.setAttribute('data-lang', lang);
+
+    // Create/update dynamic style to hide non-matching languages
+    var styleId = 'lang-style';
+    var styleEl = document.getElementById(styleId);
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = styleId;
+      document.head.appendChild(styleEl);
     }
+    var rules = {
+      zh: '.lang-en,.lang-ja{display:none!important}',
+      en: '.lang-zh,.lang-ja{display:none!important}',
+      ja: '.lang-zh,.lang-en{display:none!important}'
+    };
+    styleEl.textContent = rules[lang] || '';
+
+    // Store lang for masthead buttons
+    window._currentLang = lang;
   })();
 </script>
 

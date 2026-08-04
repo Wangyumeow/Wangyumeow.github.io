@@ -55,6 +55,17 @@
         html.setAttribute('data-lang', lang);
         localStorage.setItem('lang', lang);
 
+        // Update dynamic style to hide non-matching languages
+        var styleEl = document.getElementById('lang-style');
+        if (styleEl) {
+          var rules = {
+            zh: '.lang-en,.lang-ja{display:none!important}',
+            en: '.lang-zh,.lang-ja{display:none!important}',
+            ja: '.lang-zh,.lang-en{display:none!important}'
+          };
+          styleEl.textContent = rules[lang] || '';
+        }
+
         // Update active state
         buttons.forEach(function(b) { b.classList.remove('active'); });
         this.classList.add('active');
