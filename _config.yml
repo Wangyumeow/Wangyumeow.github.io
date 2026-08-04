@@ -26,8 +26,8 @@ author:
   avatar           : "profile.png"
   name             : "王宇傲 Wang Yu'ao"
   pronouns         : "he/him"
-  bio              : "复旦大学国际政治—国际传播硕士研究生，研究日本问题与国际治理议题"
-  location         : "上海"
+  bio              : '<span class="lang-zh">复旦大学国际政治—国际传播硕士研究生，研究日本问题与国际治理议题</span><span class="lang-en">M.A. student in International Politics & Communication at Fudan University, researching Japanese studies and international governance</span><span class="lang-ja">復旦大学国際政治・国際コミュニケーション専攻修士課程。日本研究と国際ガバナンスを専攻</span>'
+  location         : '<span class="lang-zh">上海</span><span class="lang-en">Shanghai</span><span class="lang-ja">上海</span>'
   employer         : "复旦大学"
   uri              : # URL
   email            : "Jasonwong_011003@163.com" 
