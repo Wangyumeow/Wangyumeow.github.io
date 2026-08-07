@@ -19,102 +19,71 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
-<!-- Language Switcher Styles -->
+<!-- Masthead menu flex layout for lang switcher -->
 <style>
-  /* --- Language switcher buttons --- */
-  .lang-switcher {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    margin-left: 16px;
-    flex-shrink: 0;
-  }
-  .lang-btn {
-    display: inline-block;
-    padding: 3px 10px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.5;
-    border: 1px solid #bbb;
-    border-radius: 20px;
-    background: transparent;
-    color: #555;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
-    font-family: inherit;
-  }
-  .lang-btn:hover {
-    border-color: #666;
-    color: #222;
-    background: rgba(0,0,0,0.04);
-  }
-  .lang-btn.active {
-    background: #494e52;
-    color: #fff;
-    border-color: #494e52;
-  }
-
-  /* No-JS fallback: when html has no data-lang yet, show all.
-     Once lang-style is injected by JS, visibility is controlled. */
-  html:not([data-lang]) .lang-en,
-  html:not([data-lang]) .lang-ja { /* show all on no-JS */ }
-
-  /* Masthead menu flex layout for lang switcher */
   .masthead__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  /* Responsive: hide lang switcher on narrow screens */
   @media (max-width: 600px) {
-    .lang-switcher {
-      display: none;
-    }
+    .lang-switcher { display: none; }
   }
 </style>
 
+<!-- Language detection + visibility control -->
+<!-- CSS rules in _language_switcher.scss (compiled into main.css) use html[data-lang] to hide non-matching languages -->
+<!-- JS below sets data-lang attribute + applies inline styles as belt-and-suspenders backup -->
 <script>
-  // Determine & apply language — directly set inline style on DOM elements
-  // This is the HIGHEST CSS priority, no external stylesheet can override it
   (function() {
-    var lang = (new URLSearchParams(window.location.search)).get('lang');
-    if (!lang) { lang = localStorage.getItem('lang'); }
-    if (!lang && navigator.language) {
-      var bl = navigator.language.toLowerCase();
-      if (bl.startsWith('zh')) lang = 'zh';
-      else if (bl.startsWith('ja')) lang = 'ja';
-      else lang = 'en';
+    function detectLang() {
+      var lang = (new URLSearchParams(window.location.search)).get('lang');
+      if (!lang) lang = localStorage.getItem('lang');
+      if (!lang && navigator.language) {
+        var bl = navigator.language.toLowerCase();
+        if (bl.startsWith('zh')) lang = 'zh';
+        else if (bl.startsWith('ja')) lang = 'ja';
+        else lang = 'en';
+      }
+      if (!lang || ['zh','en','ja'].indexOf(lang) < 0) lang = 'en';
+      return lang;
     }
-    if (!lang || ['zh','en','ja'].indexOf(lang) < 0) lang = 'en';
 
-    // Set data-lang attribute
+    var lang = detectLang();
+
+    // Set data-lang on <html> — this activates CSS rules in main.css
     document.documentElement.setAttribute('data-lang', lang);
 
-    // Utility: apply visibility to ALL lang-tagged elements
-    window.setLangVisibility = function(lang) {
-      var allTags = ['zh','en','ja'];
-      allTags.forEach(function(tag) {
+    // Backup: also set inline styles (highest CSS priority)
+    window.setLangVisibility = function(l) {
+      var tags = ['zh','en','ja'];
+      for (var t = 0; t < tags.length; t++) {
+        var tag = tags[t];
         var els = document.querySelectorAll('.lang-' + tag);
         for (var i = 0; i < els.length; i++) {
-          if (tag === lang) {
-            // Show: remove inline display style
+          if (tag === l) {
             els[i].style.removeProperty('display');
           } else {
-            // Hide with !important inline style
             els[i].style.setProperty('display', 'none', 'important');
           }
         }
-      });
+      }
     };
 
-    // Apply visibility immediately (DOM may not be fully ready,
-    // but style on head-level elements works; we also re-run on DOMContentLoaded)
-    window.setLangVisibility(lang);
-
-    // Re-run on DOM ready to catch all dynamically inserted elements
+    // Apply on DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function() {
+      var currentLang = document.documentElement.getAttribute('data-lang');
+      window.setLangVisibility(currentLang);
+
+      // MutationObserver: re-apply if greedy-nav or other JS modifies the DOM
+      var observer = new MutationObserver(function(mutations) {
+        window.setLangVisibility(document.documentElement.getAttribute('data-lang'));
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+
+    // Final fallback: re-apply after everything (including main.min.js) loads
+    window.addEventListener('load', function() {
       window.setLangVisibility(document.documentElement.getAttribute('data-lang'));
     });
 

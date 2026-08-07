@@ -52,21 +52,14 @@
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
         var lang = this.getAttribute('data-lang');
+        // Update data-lang attribute (triggers CSS rules in main.css)
         html.setAttribute('data-lang', lang);
         localStorage.setItem('lang', lang);
 
-        // Use inline style (highest CSS priority) to control visibility
-        var allTags = ['zh','en','ja'];
-        allTags.forEach(function(tag) {
-          var els = document.querySelectorAll('.lang-' + tag);
-          for (var i = 0; i < els.length; i++) {
-            if (tag === lang) {
-              els[i].style.removeProperty('display');
-            } else {
-              els[i].style.setProperty('display', 'none', 'important');
-            }
-          }
-        });
+        // Also apply inline styles as backup
+        if (window.setLangVisibility) {
+          window.setLangVisibility(lang);
+        }
 
         // Update active state
         buttons.forEach(function(b) { b.classList.remove('active'); });
