@@ -12,34 +12,34 @@ redirect_from:
 <span class="lang-zh">教育背景</span><span class="lang-en">Education</span><span class="lang-ja">学歴</span>
 ======
 
-<span class="lang-zh">
+<div class="lang-zh">
 * 国际政治—国际传播，硕士（学术学位），复旦大学，2025.09–2028.06
   * 推荐免试入学，国际关系与公共事务学院与国际传播与全球领导力学院联合培养
   * 研究兴趣：日本问题研究（日本的国际传播、日本国内与国际政治）；国际治理议题（环境与国际政治、国际传播话语与国家形象）
 * 国际政治（辅修新闻学），本科（法学学士），复旦大学，2021.09–2025.06
   * 优秀学生二等奖学金×1、三等奖学金×2；复旦大学优秀学生、优秀毕业生
-</span>
+</div>
 
-<span class="lang-en">
+<div class="lang-en">
 * M.A. in International Politics and International Communication, Fudan University, 2025.09–2028.06
   * Jointly trained by SIRPA and SICGL, admitted via recommendation exemption
   * Research: Japan Studies; Global Governance (environmental politics, international communication discourse)
 * B.A. in International Politics (Minor in Journalism), Fudan University, 2021.09–2025.06
   * Second-Class Scholarship ×1, Third-Class Scholarship ×2; Outstanding Student and Outstanding Graduate
-</span>
+</div>
 
-<span class="lang-ja">
+<div class="lang-ja">
 * 国際政治・国際コミュニケーション専攻、修士（学術学位）、復旦大学、2025年9月–2028年6月
   * 推薦免試入学、国際関係・公共事務学院と国際コミュニケーション・グローバルリーダーシップ学院の共同養成
   * 研究分野：日本研究（日本の国際コミュニケーション、日本の国内・国際政治）；グローバル・ガバナンス（環境と国際政治、国際コミュニケーションの言説）
 * 国際政治専攻（新聞学副専攻）、学士（法学士）、復旦大学、2021年9月–2025年6月
   * 優秀学生二等奨学金×1、三等奨学金×2；復旦大学優秀学生、優秀卒業生
-</span>
+</div>
 
 <span class="lang-zh">工作与实习经历</span><span class="lang-en">Work & Internship Experience</span><span class="lang-ja">職務経験・インターンシップ</span>
 ======
 
-<span class="lang-zh">
+<div class="lang-zh">
 * 2026.03–2026.07：科研与党务助理，复旦大学国际关系与公共事务学院
   * 协助科研服务工作，负责项目管理、文案写作、会议记录整理
   * 协助学院第四次党代会会务支持
@@ -67,9 +67,9 @@ redirect_from:
 * 2023.06–2023.09：HR服务实习生，中芯国际
   * 设计并参与人事档案电子化项目，制定覆盖4个分部的SOP
   * 承担整组20%以上工作量，优化工作量调配
-</span>
+</div>
 
-<span class="lang-en">
+<div class="lang-en">
 * 2026.03–2026.07: Research & Party Affairs Assistant, SIRPA, Fudan University
   * Assisted with research services, project management, copywriting, meeting minutes
   * Supported the 4th Party Congress of SIRPA
@@ -97,9 +97,9 @@ redirect_from:
 * 2023.06–2023.09: HR Services Intern, SMIC
   * Designed HR file digitization project with SOPs covering 4 divisions
   * Handled 20%+ of team workload
-</span>
+</div>
 
-<span class="lang-ja">
+<div class="lang-ja">
 * 2026年3月–2026年7月：研究・党務アシスタント、復旦大学国際関係・公共事務学院
   * 研究サービス補助、プロジェクト管理、文書作成、議事録整理
   * 学院第4回党代表大会の運営支援
@@ -127,58 +127,58 @@ redirect_from:
 * 2023年6月–2023年9月：HRサービスインターン、SMIC
   * 人事ファイル電子化プロジェクトの設計・参加、4部門をカバーするSOP策定
   * チーム全体の20%以上の業務量を担当
-</span>
+</div>
 
 <span class="lang-zh">校园经历</span><span class="lang-en">Campus Activities</span><span class="lang-ja">課外活動</span>
 ======
 
-<span class="lang-zh">
+<div class="lang-zh">
 * 2026.01–至今：复旦大学声音剧场，宣传负责人兼前台导演
 * 2023.09–2024.08：复旦大学广播台，副台长兼团书记
 * 2022.09–2022.12：复旦大学演讲与口才协会，副理事长
 * 2021.09–2023.07：复旦大学志德书院学生自我管理委员会，交流实践中心主任
 * 2021.09–2023.07：复旦大学国务学院团委学生会，秘书处/文艺部部门负责人
-</span>
+</div>
 
-<span class="lang-en">
+<div class="lang-en">
 * 2026.01–Present: Fudan Sound Theater, PR Lead & Front-of-House Director
 * 2023.09–2024.08: Fudan Broadcasting Station, Deputy Director & Youth League Secretary
 * 2022.09–2022.12: Fudan Speech & Eloquence Association, Vice President
 * 2021.09–2023.07: Zhide College Student Self-Management Committee, Director of Exchange & Practice Center
 * 2021.09–2023.07: SIRPA Student Union, Department Head (Secretariat / Arts)
-</span>
+</div>
 
-<span class="lang-ja">
+<div class="lang-ja">
 * 2026年1月–現在：復旦大学サウンドシアター、広報責任者兼フロントディレクター
 * 2023年9月–2024年8月：復旦大学放送局、副局長兼団書記
 * 2022年9月–2022年12月：復旦大学スピーチ・ディベート協会、副理事長
 * 2021年9月–2023年7月：志徳書院学生自治委員会、交流実践センター長
 * 2021年9月–2023年7月：SIRPA学生連合会、秘書処・文芸部責任者
-</span>
+</div>
 
 <span class="lang-zh">技能</span><span class="lang-en">Skills</span><span class="lang-ja">スキル</span>
 ======
 
-<span class="lang-zh">
+<div class="lang-zh">
 * Adobe 系列：Premiere Pro、After Effects、Photoshop、Illustrator、Audition
 * 办公工具：MS Office、Canva、剪映
 * 语言：中文（母语）、英语（CET-6）
 * 其他：AIGC工具使用、招聘全流程管理、项目管理、内容策划与品牌运营
-</span>
+</div>
 
-<span class="lang-en">
+<div class="lang-en">
 * Adobe Suite: Premiere Pro, After Effects, Photoshop, Illustrator, Audition
 * Office Tools: MS Office, Canva, CapCut
 * Languages: Chinese (Native), English (CET-6)
 * Others: AIGC tools, full-cycle recruitment, project management, content planning & brand operations
-</span>
+</div>
 
-<span class="lang-ja">
+<div class="lang-ja">
 * Adobeシリーズ：Premiere Pro、After Effects、Photoshop、Illustrator、Audition
 * オフィスツール：MS Office、Canva、CapCut
 * 言語：中国語（母語）、英語（CET-6）
 * その他：AIGCツール活用、採用プロセス全般管理、プロジェクト管理、コンテンツ企画・ブランド運営
-</span>
+</div>
 
 <span class="lang-zh">学术成果</span><span class="lang-en">Publications</span><span class="lang-ja">研究業績</span>
 ======

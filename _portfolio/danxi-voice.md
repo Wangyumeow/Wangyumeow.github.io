@@ -6,14 +6,14 @@ excerpt: '<span class="lang-zh">复旦大学广播台与融媒体中心共创项
 date: 2025-06-01
 ---
 
-<span class="lang-zh">
+<div class="lang-zh">
 复旦大学广播台与复旦大学党委宣传部融媒体中心的共创项目"旦夕之声"，参与策划与制作。
-</span>
+</div>
 
-<span class="lang-en">
+<div class="lang-en">
 "Danxi Voice" is a collaborative project between Fudan Broadcasting Station and the Converged Media Center of Fudan University, where I participated in planning and production.
-</span>
+</div>
 
-<span class="lang-ja">
+<div class="lang-ja">
 復旦大学放送局と復旦大学党委宣伝部コンバージドメディアセンターの共同プロジェクト「旦夕之声」に参加し、企画・制作に携わりました。
-</span>
+</div>
