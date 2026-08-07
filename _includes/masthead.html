@@ -39,31 +39,9 @@
   // Language switcher click handler
   (function() {
     var buttons = document.querySelectorAll('.lang-btn');
-    var html = document.documentElement;
-    var currentLang = html.getAttribute('data-lang') || 'zh';
-
-    // Set active button on load
-    buttons.forEach(function(btn) {
-      if (btn.getAttribute('data-lang') === currentLang) {
-        btn.classList.add('active');
-      }
-    });
-
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
-        var lang = this.getAttribute('data-lang');
-        // Update data-lang attribute (triggers CSS rules in main.css)
-        html.setAttribute('data-lang', lang);
-        localStorage.setItem('lang', lang);
-
-        // Also apply inline styles as backup
-        if (window.setLangVisibility) {
-          window.setLangVisibility(lang);
-        }
-
-        // Update active state
-        buttons.forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
+        window.switchLang(this.getAttribute('data-lang'));
       });
     });
   })();

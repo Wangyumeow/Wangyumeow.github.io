@@ -31,63 +31,86 @@
   }
 </style>
 
-<!-- Language detection + visibility control -->
-<!-- CSS rules in _language_switcher.scss (compiled into main.css) use html[data-lang] to hide non-matching languages -->
-<!-- JS below sets data-lang attribute + applies inline styles as belt-and-suspenders backup -->
+<!-- Language switcher: sets each .lang-XX element's display directly, no CSS dependency -->
 <script>
-  (function() {
-    function detectLang() {
-      var lang = (new URLSearchParams(window.location.search)).get('lang');
-      if (!lang) lang = localStorage.getItem('lang');
-      if (!lang && navigator.language) {
-        var bl = navigator.language.toLowerCase();
-        if (bl.startsWith('zh')) lang = 'zh';
-        else if (bl.startsWith('ja')) lang = 'ja';
-        else lang = 'en';
-      }
-      if (!lang || ['zh','en','ja'].indexOf(lang) < 0) lang = 'en';
-      return lang;
-    }
+  window.switchLang = function(lang) {
+    // Only allow zh/en/ja
+    if (['zh','en','ja'].indexOf(lang) < 0) lang = 'zh';
 
-    var lang = detectLang();
-
-    // Set data-lang on <html> — this activates CSS rules in main.css
+    // Update html attribute (may trigger CSS, but we don't rely on it)
     document.documentElement.setAttribute('data-lang', lang);
+    localStorage.setItem('lang', lang);
 
-    // Backup: also set inline styles (highest CSS priority)
-    window.setLangVisibility = function(l) {
-      var tags = ['zh','en','ja'];
-      for (var t = 0; t < tags.length; t++) {
-        var tag = tags[t];
-        var els = document.querySelectorAll('.lang-' + tag);
-        for (var i = 0; i < els.length; i++) {
-          if (tag === l) {
-            els[i].style.removeProperty('display');
-          } else {
-            els[i].style.setProperty('display', 'none', 'important');
-          }
+    // Walk every .lang-zh, .lang-en, .lang-ja element and set display directly
+    var tags = ['zh','en','ja'];
+    for (var t = 0; t < tags.length; t++) {
+      var tag = tags[t];
+      var els = document.getElementsByClassName('lang-' + tag);
+      // getElementsByClassName returns a live HTMLCollection — convert to array
+      for (var i = els.length - 1; i >= 0; i--) {
+        if (tag === lang) {
+          els[i].style.removeProperty('display');
+        } else {
+          els[i].style.setProperty('display', 'none', 'important');
         }
       }
-    };
+    }
 
-    // Apply on DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', function() {
-      var currentLang = document.documentElement.getAttribute('data-lang');
-      window.setLangVisibility(currentLang);
+    // Update button active state
+    var btns = document.querySelectorAll('.lang-btn');
+    for (var j = 0; j < btns.length; j++) {
+      if (btns[j].getAttribute('data-lang') === lang) {
+        btns[j].classList.add('active');
+      } else {
+        btns[j].classList.remove('active');
+      }
+    }
+  };
 
-      // MutationObserver: re-apply if greedy-nav or other JS modifies the DOM
-      var observer = new MutationObserver(function(mutations) {
-        window.setLangVisibility(document.documentElement.getAttribute('data-lang'));
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-    });
+  // Determine language from localStorage or browser
+  (function() {
+    var lang = localStorage.getItem('lang');
+    if (!lang) {
+      var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (bl.indexOf('zh') === 0) lang = 'zh';
+      else if (bl.indexOf('ja') === 0) lang = 'ja';
+      else lang = 'en';
+    }
 
-    // Final fallback: re-apply after everything (including main.min.js) loads
+    // Apply language visibility
+    function applyNow() {
+      window.switchLang(lang);
+    }
+
+    // Phase 1: run as soon as DOM is interactive
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyNow);
+    } else {
+      applyNow();
+    }
+
+    // Phase 2: re-run after ALL resources (main.min.js, greedy-nav) finish loading
     window.addEventListener('load', function() {
-      window.setLangVisibility(document.documentElement.getAttribute('data-lang'));
+      // Small delay to let greedy-nav finish DOM manipulation
+      setTimeout(applyNow, 50);
+      setTimeout(applyNow, 200);
     });
 
-    window._currentLang = lang;
+    // Phase 3: MutationObserver watches for greedy-nav DOM rewrites
+    var observerStarted = false;
+    function startObserver() {
+      if (observerStarted || !window.MutationObserver) return;
+      observerStarted = true;
+      var obs = new MutationObserver(function() {
+        window.switchLang(document.documentElement.getAttribute('data-lang') || lang);
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+    }
+    window.addEventListener('load', startObserver);
+    // Also start observer earlier as a fallback
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(startObserver, 100);
+    });
   })();
 </script>
 
