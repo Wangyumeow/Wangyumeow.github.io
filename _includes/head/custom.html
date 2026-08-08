@@ -2,112 +2,106 @@
 
 <!-- start custom head snippets -->
 
-<!-- Google Fonts: Noto Serif SC (思源宋体) for Chinese academic typography -->
+<!-- Google Fonts: Inter (English), Noto Sans SC (Chinese), Noto Sans JP (Japanese) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-<!-- Support for Academicons -->
+<!-- Academicons -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<!-- favicon -->
+<!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
-<meta name="theme-color" content="#ffffff"/>
+<meta name="theme-color" content="#1a3a5c"/>
 
-<!-- Masthead menu flex layout for lang switcher -->
-<style>
-  .masthead__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  @media (max-width: 600px) {
-    .lang-switcher { display: none; }
-  }
-</style>
+<!-- Academic profile links (placeholders for ORCID / Google Scholar) -->
+<link rel="me" href="https://orcid.org/0000-0000-0000-0000">
+<link rel="me" href="https://github.com/Wangyumeow">
 
-<!-- Language switcher: sets each .lang-XX element's display directly, no CSS dependency -->
+<!-- Language switcher core JS -->
 <script>
-  window.switchLang = function(lang) {
-    // Only allow zh/en/ja
-    if (['zh','en','ja'].indexOf(lang) < 0) lang = 'zh';
+  (function() {
+    // Determine initial language
+    var storedLang = null;
+    try { storedLang = localStorage.getItem('lang'); } catch(e) {}
 
-    // Update html attribute (may trigger CSS, but we don't rely on it)
-    document.documentElement.setAttribute('data-lang', lang);
-    localStorage.setItem('lang', lang);
+    var initLang = storedLang;
+    if (!initLang || ['zh','en','ja'].indexOf(initLang) < 0) {
+      var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (bl.indexOf('zh') === 0) initLang = 'zh';
+      else if (bl.indexOf('ja') === 0) initLang = 'ja';
+      else initLang = 'en';
+    }
 
-    // Walk every .lang-zh, .lang-en, .lang-ja element and set display directly
-    var tags = ['zh','en','ja'];
-    for (var t = 0; t < tags.length; t++) {
-      var tag = tags[t];
-      var els = document.getElementsByClassName('lang-' + tag);
-      // getElementsByClassName returns a live HTMLCollection — convert to array
-      for (var i = els.length - 1; i >= 0; i--) {
-        if (tag === lang) {
-          els[i].style.removeProperty('display');
-        } else {
-          els[i].style.setProperty('display', 'none', 'important');
+    // Set html data-lang immediately (before DOM renders) to prevent flash
+    document.documentElement.setAttribute('data-lang', initLang);
+
+    window.switchLang = function(lang) {
+      if (['zh','en','ja'].indexOf(lang) < 0) lang = 'en';
+      document.documentElement.setAttribute('data-lang', lang);
+      try { localStorage.setItem('lang', lang); } catch(e) {}
+
+      // Toggle visibility of all .lang-XX elements
+      var tags = ['zh','en','ja'];
+      for (var t = 0; t < tags.length; t++) {
+        var tag = tags[t];
+        var els = document.getElementsByClassName('lang-' + tag);
+        for (var i = els.length - 1; i >= 0; i--) {
+          if (tag === lang) {
+            els[i].style.removeProperty('display');
+          } else {
+            els[i].style.setProperty('display', 'none', 'important');
+          }
         }
       }
-    }
 
-    // Update button active state
-    var btns = document.querySelectorAll('.lang-btn');
-    for (var j = 0; j < btns.length; j++) {
-      if (btns[j].getAttribute('data-lang') === lang) {
-        btns[j].classList.add('active');
-      } else {
-        btns[j].classList.remove('active');
+      // Update active button state
+      var btns = document.querySelectorAll('.lang-btn');
+      for (var j = 0; j < btns.length; j++) {
+        if (btns[j].getAttribute('data-lang') === lang) {
+          btns[j].classList.add('active');
+        } else {
+          btns[j].classList.remove('active');
+        }
       }
-    }
-  };
 
-  // Determine language from localStorage or browser
-  (function() {
-    var lang = localStorage.getItem('lang');
-    if (!lang) {
-      var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (bl.indexOf('zh') === 0) lang = 'zh';
-      else if (bl.indexOf('ja') === 0) lang = 'ja';
-      else lang = 'en';
+      // Update html lang attribute
+      var langMap = { zh: 'zh-CN', en: 'en', ja: 'ja' };
+      document.documentElement.setAttribute('lang', langMap[lang] || 'en');
+    };
+
+    // Apply language at multiple stages to handle greedy-nav DOM rewrites
+    function applyLang() {
+      window.switchLang(document.documentElement.getAttribute('data-lang') || initLang);
     }
 
-    // Apply language visibility
-    function applyNow() {
-      window.switchLang(lang);
-    }
-
-    // Phase 1: run as soon as DOM is interactive
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', applyNow);
+      document.addEventListener('DOMContentLoaded', applyLang);
     } else {
-      applyNow();
+      applyLang();
     }
 
-    // Phase 2: re-run after ALL resources (main.min.js, greedy-nav) finish loading
     window.addEventListener('load', function() {
-      // Small delay to let greedy-nav finish DOM manipulation
-      setTimeout(applyNow, 50);
-      setTimeout(applyNow, 200);
+      setTimeout(applyLang, 50);
+      setTimeout(applyLang, 200);
     });
 
-    // Phase 3: MutationObserver watches for greedy-nav DOM rewrites
+    // MutationObserver: re-apply when greedy-nav rewrites the DOM
     var observerStarted = false;
     function startObserver() {
       if (observerStarted || !window.MutationObserver) return;
       observerStarted = true;
       var obs = new MutationObserver(function() {
-        window.switchLang(document.documentElement.getAttribute('data-lang') || lang);
+        window.switchLang(document.documentElement.getAttribute('data-lang') || initLang);
       });
       obs.observe(document.body, { childList: true, subtree: true });
     }
     window.addEventListener('load', startObserver);
-    // Also start observer earlier as a fallback
     document.addEventListener('DOMContentLoaded', function() {
       setTimeout(startObserver, 100);
     });

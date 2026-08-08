@@ -1,14 +1,18 @@
-# Navigation links - trilingual (Chinese / English / Japanese)
+# Navigation links — keys reference _data/languages/{lang}.yml
+# Trilingual labels are rendered from language data files
 
 main:
-  - title: '<span class="lang-zh">学术成果</span><span class="lang-en">Publications</span><span class="lang-ja">研究業績</span>'
+  - key: nav_about
+    url: /about/
+
+  - key: nav_research
+    url: /research/
+
+  - key: nav_publications
     url: /publications/
 
-  - title: '<span class="lang-zh">会议报告</span><span class="lang-en">Talks</span><span class="lang-ja">学会報告</span>'
-    url: /talks/
-
-  - title: '<span class="lang-zh">实践项目</span><span class="lang-en">Projects</span><span class="lang-ja">プロジェクト</span>'
-    url: /portfolio/
-
-  - title: '<span class="lang-zh">简历</span><span class="lang-en">CV</span><span class="lang-ja">履歴書</span>'
+  - key: nav_cv
     url: /cv/
+
+  - key: nav_blog
+    url: /blog/

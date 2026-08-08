@@ -6,7 +6,11 @@
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+            <a href="{{ base_path }}/">
+              {% for lang in "zh,en,ja" | split: "," %}
+              <span class="lang-{{ lang }}">{{ site.data.languages[lang].site_title }}</span>
+              {% endfor %}
+            </a>
           </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -15,21 +19,22 @@
               {% assign domain = base_path %}
             {% endif %}
             <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+              <a href="{{ domain }}{{ link.url }}">
+                {% for lang in "zh,en,ja" | split: "," %}
+                <span class="lang-{{ lang }}">{{ site.data.languages[lang][link.key] }}</span>
+                {% endfor %}
+              </a>
             </li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
 
-      <!-- Language switcher OUTSIDE greedy-nav to prevent JS destruction -->
+      <!-- Language switcher (outside greedy-nav to prevent JS destruction) -->
       <div class="lang-switcher">
-        <button class="lang-btn" data-lang="zh" aria-label="中文">中</button>
-        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
-        <button class="lang-btn" data-lang="ja" aria-label="日本語">日</button>
+        <button class="lang-btn" data-lang="zh" aria-label="中文">{{ site.data.languages.zh.lang_zh_name }}</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">{{ site.data.languages.en.lang_en_name }}</button>
+        <button class="lang-btn" data-lang="ja" aria-label="日本語">{{ site.data.languages.ja.lang_ja_name }}</button>
       </div>
     </div>
   </div>
@@ -38,11 +43,20 @@
 <script>
   // Language switcher click handler
   (function() {
-    var buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        window.switchLang(this.getAttribute('data-lang'));
+    function init() {
+      var buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          if (window.switchLang) {
+            window.switchLang(this.getAttribute('data-lang'));
+          }
+        });
       });
-    });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   })();
 </script>

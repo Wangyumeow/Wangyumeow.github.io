@@ -1,0 +1,227 @@
+// ============================================
+// _research.scss
+// Research Cards (Home) + Research Page
+// ============================================
+
+.research-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-paper);
+}
+
+.research-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.research-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-navy), var(--color-gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-gold);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.research-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.research-card__number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.research-card__icon {
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  opacity: 0.7;
+}
+
+.research-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.research-card__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.research-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.selected-research-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-paper-dark);
+}
+
+.selected-research {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.selected-research__more {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
+.research-intro {
+  max-width: var(--container-narrow);
+  margin: 0 auto var(--space-3xl);
+  padding: var(--space-xl);
+  background-color: var(--color-white);
+  border-left: 4px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.research-area {
+  max-width: var(--container-narrow);
+  margin: 0 auto var(--space-3xl);
+  padding: var(--space-2xl) var(--container-padding);
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.research-area__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.research-area__number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.research-area__icon {
+  font-size: 1.25rem;
+  color: var(--color-navy);
+}
+
+.research-area__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: 0;
+}
+
+.research-area__subtitle {
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  font-weight: 500;
+}
+
+.research-area__content {
+  margin-top: var(--space-md);
+}
+
+.research-area__desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
+.research-area__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-navy);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.research-area__questions {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+
+    &::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--color-gold);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .research-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .research-card {
+    padding: var(--space-lg);
+  }
+
+  .research-area {
+    padding: var(--space-lg);
+  }
+}

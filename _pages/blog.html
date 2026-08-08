@@ -1,0 +1,99 @@
+---
+layout: single
+title: "Academic Notes"
+permalink: /blog/
+author_profile: false
+---
+
+{% include base_path %}
+
+<!-- Subtitle -->
+<div class="blog-intro" data-reveal>
+  {% for lang in "zh,en,ja" | split: "," %}
+  <p class="lang-{{ lang }}">{{ site.data.languages[lang].blog_subtitle }}</p>
+  {% endfor %}
+</div>
+
+<!-- Category filter -->
+<div class="blog-filter" data-reveal>
+  <button class="blog-filter__btn active" data-category="all">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_all }}</span>
+    {% endfor %}
+  </button>
+  <button class="blog-filter__btn" data-category="research-notes">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_research }}</span>
+    {% endfor %}
+  </button>
+  <button class="blog-filter__btn" data-category="book-reviews">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_reviews }}</span>
+    {% endfor %}
+  </button>
+  <button class="blog-filter__btn" data-category="policy-analysis">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_policy }}</span>
+    {% endfor %}
+  </button>
+  <button class="blog-filter__btn" data-category="conference-notes">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_conference }}</span>
+    {% endfor %}
+  </button>
+</div>
+
+<!-- Post list -->
+<div class="blog-list">
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+    <article class="blog-post" data-category="{{ post.category }}" data-reveal>
+      <div class="blog-post__date">{{ post.date | date: "%Y.%m.%d" }}</div>
+      <div class="blog-post__body">
+        <h3 class="blog-post__title">
+          <a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+        <p class="blog-post__excerpt">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  {% else %}
+    <div class="blog-empty" data-reveal>
+      {% for lang in "zh,en,ja" | split: "," %}
+      <p class="lang-{{ lang }}">{{ site.data.languages[lang].blog_no_posts }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  (function() {
+    function init() {
+      var btns = document.querySelectorAll('.blog-filter__btn');
+      var items = document.querySelectorAll('.blog-post');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var cat = this.getAttribute('data-category');
+          btns.forEach(function(b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          var visible = 0;
+          items.forEach(function(item) {
+            if (cat === 'all' || item.getAttribute('data-category') === cat) {
+              item.style.display = '';
+              visible++;
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

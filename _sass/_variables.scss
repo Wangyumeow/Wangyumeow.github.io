@@ -1,0 +1,66 @@
+// ============================================
+// _variables.scss
+// Modern Academic Minimalism — Design Tokens
+// ============================================
+
+:root {
+  // ---- Brand Colors ----
+  --color-navy: #1a3a5c;
+  --color-navy-light: #2d5a82;
+  --color-navy-dark: #0f2840;
+  --color-paper: #faf8f5;
+  --color-paper-dark: #f0ede8;
+  --color-gold: #b8860b;
+  --color-gold-light: #d4a017;
+
+  // ---- Neutral Colors ----
+  --color-text: #2c2c2c;
+  --color-text-muted: #6c6c6c;
+  --color-text-light: #999999;
+  --color-border: #e0ddd8;
+  --color-border-light: #ececec;
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+
+  // ---- Fonts ----
+  --font-sans: "Inter", "Noto Sans SC", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+  // ---- Spacing (8px grid) ----
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  // ---- Container ----
+  --container-max: 1200px;
+  --container-narrow: 820px;
+  --container-padding: 24px;
+
+  // ---- Radius ----
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  // ---- Shadows ----
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+
+  // ---- Transitions ----
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  // ---- Z-index ----
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+
+  // ---- Header ----
+  --header-height: 60px;
+}

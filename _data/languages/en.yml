@@ -1,0 +1,168 @@
+# English — UI strings and content
+# ====================================
+
+# Site
+site_title: "Yu'ao Wang"
+site_description: "International Relations Researcher | Fudan University"
+site_author: "Wang Yu'ao"
+
+# Navigation
+nav_home: "Home"
+nav_about: "About"
+nav_research: "Research"
+nav_publications: "Publications"
+nav_cv: "CV"
+nav_blog: "Academic Notes"
+
+# Language switcher
+lang_zh_name: "中文"
+lang_en_name: "EN"
+lang_ja_name: "日"
+
+# Hero Section
+hero_name: "Yu'ao Wang"
+hero_name_native: "王宇傲"
+hero_title: "International Relations Researcher"
+hero_affiliation: "Fudan University"
+hero_subtitle: "M.A. Student in International Politics & International Communication"
+hero_area_label: "Research Areas"
+hero_area_1: "Japan Politics"
+hero_area_2: "Global Governance"
+hero_area_3: "Political Communication"
+
+# Home — Research Interests
+section_research_interests: "Research Interests"
+research_01_title: "Japan Politics"
+research_01_subtitle: "日本政治"
+research_01_desc: "Research on Japanese party politics, LDP faction dynamics, cabinet formation, and political communication."
+research_02_title: "Global Governance"
+research_02_subtitle: "全球治理"
+research_02_desc: "Research on UN reform, multilateralism, international organizations, and global governance mechanisms."
+research_03_title: "Political Communication"
+research_03_subtitle: "政治传播"
+research_03_desc: "Research on digital media political communication, national image construction, and international communication."
+
+# Home — Selected Research
+section_selected_research: "Selected Research"
+selected_research_view_all: "View all publications"
+
+# Home — Academic Timeline
+section_timeline: "Academic Timeline"
+timeline_education: "Education"
+timeline_research: "Research Experience"
+timeline_exchange: "International Exchange"
+timeline_activities: "Academic Activities"
+
+# About Page
+about_title: "About"
+about_bio_label: "Biography"
+about_education_label: "Education"
+about_research_interests_label: "Research Interests"
+about_interdisciplinary_label: "Interdisciplinary Experience"
+about_languages_label: "Languages"
+about_skills_label: "Technical Skills"
+
+about_bio: |
+  Wang Yu'ao is a Master's student in International Politics and International Communication at Fudan University (2025–2028), jointly trained by the School of International Relations and Public Affairs (SIRPA) and the School of International Communication and Global Leadership (SICGL), admitted through the recommendation exemption program.
+
+  His research focuses on Japan studies and global governance. Specifically, he examines Japan's international communication, domestic and international politics, as well as environmental politics, international communication discourse, and national image construction.
+
+  He holds a B.A. in International Politics (Minor in Journalism) from Fudan University, where he received the Outstanding Student and Outstanding Graduate awards.
+
+about_education_items:
+  - period: "2025.09 – 2028.06"
+    degree: "M.A. in International Politics and International Communication"
+    institution: "Fudan University"
+    detail: "Jointly trained by SIRPA and SICGL. Admitted via recommendation exemption."
+  - period: "2021.09 – 2025.06"
+    degree: "B.A. in International Politics (Minor in Journalism)"
+    institution: "Fudan University"
+    detail: "Second-Class Scholarship x1, Third-Class Scholarship x2. Outstanding Student and Outstanding Graduate."
+
+about_interest_items:
+  - name: "Japan Studies"
+    desc: "Japan's international communication; domestic and international politics"
+  - name: "Global Governance"
+    desc: "Environmental politics; international communication discourse and national image"
+
+about_interdisciplinary: |
+  Interdisciplinary background in International Politics and Journalism. Practical experience spans media operations (Converged Media Center, Fudan University), administrative affairs (SIRPA), and international affairs (HKTDC, CIIE).
+
+about_languages_items:
+  - name: "Chinese"
+    level: "Native"
+  - name: "English"
+    level: "CET-6 (Fluent)"
+  - name: "Japanese"
+    level: "Intermediate (JLPT N2 equivalent)"
+
+about_skills_items:
+  - "Adobe Suite: Premiere Pro, After Effects, Photoshop, Illustrator, Audition"
+  - "Office Tools: MS Office, Canva, CapCut"
+  - "AIGC Tools"
+  - "Project Management"
+
+# Research Page
+research_page_title: "Research"
+research_page_intro: |
+  My research examines the intersection of Japanese politics, global governance, and political communication. Below are my three main research areas, each with key questions, current projects, and future directions.
+research_questions_label: "Research Questions"
+research_current_projects_label: "Current Projects"
+research_publications_label: "Publications"
+research_future_label: "Future Research"
+
+# Publications Page
+publications_title: "Publications"
+publications_abstract_label: "Abstract"
+publications_keywords_label: "Keywords"
+publications_status_label: "Status"
+publications_date_label: "Date"
+publications_pdf_label: "Download PDF"
+publications_citation_label: "Citation"
+publications_category_all: "All"
+publications_category_books: "Books & Press"
+publications_category_manuscripts: "Journal Articles"
+publications_category_conferences: "Conference Papers"
+publications_status_published: "Published"
+publications_status_in_preparation: "In preparation"
+publications_status_completed: "Completed"
+publications_status_awarded: "Awarded"
+
+# CV Page
+cv_title: "Curriculum Vitae"
+cv_download_label: "Download CV (PDF)"
+cv_education_label: "Education"
+cv_research_experience_label: "Research Experience"
+cv_work_experience_label: "Work & Internship Experience"
+cv_publications_label: "Publications"
+cv_awards_label: "Awards & Honors"
+cv_conferences_label: "Conferences"
+cv_exchange_label: "Exchange Experience"
+cv_campus_activities_label: "Campus Activities"
+cv_skills_label: "Skills"
+
+# Blog Page
+blog_title: "Academic Notes"
+blog_subtitle: "Research notes, book reviews, policy analysis, and conference reflections."
+blog_category_all: "All"
+blog_category_research: "Research Notes"
+blog_category_reviews: "Book Reviews"
+blog_category_policy: "Policy Analysis"
+blog_category_conference: "Conference Notes"
+blog_no_posts: "No posts yet. Check back soon."
+
+# Footer
+footer_copyright: "Yu'ao Wang"
+footer_powered_by: "Powered by Jekyll"
+footer_last_updated: "Last updated"
+
+# 404
+error_404_title: "Page Not Found"
+error_404_message: "The page you are looking for does not exist."
+error_404_back: "Back to Home"
+
+# Contact
+contact_title: "Contact"
+contact_email_label: "Email"
+contact_location_label: "Location"
+contact_location_value: "Shanghai"

@@ -1,0 +1,85 @@
+{% include base_path %}
+
+<section class="timeline-section" id="timeline">
+  <div class="container">
+    <h2 class="section-title" data-reveal>
+      {% for lang in "zh,en,ja" | split: "," %}
+      <span class="lang-{{ lang }}">{{ site.data.languages[lang].section_timeline }}</span>
+      {% endfor %}
+    </h2>
+
+    <div class="timeline-tabs" data-reveal>
+      <button class="timeline-tab active" data-category="all">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_category_all }}</span>
+        {% endfor %}
+      </button>
+      <button class="timeline-tab" data-category="education">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_education }}</span>
+        {% endfor %}
+      </button>
+      <button class="timeline-tab" data-category="research">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_research }}</span>
+        {% endfor %}
+      </button>
+      <button class="timeline-tab" data-category="exchange">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_exchange }}</span>
+        {% endfor %}
+      </button>
+      <button class="timeline-tab" data-category="activities">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_activities }}</span>
+        {% endfor %}
+      </button>
+    </div>
+
+    <div class="timeline">
+      {% for entry in site.data.timeline.entries %}
+      <div class="timeline-item" data-category="{{ entry.category }}" data-reveal>
+        <div class="timeline-item__marker"></div>
+        <div class="timeline-item__content">
+          <span class="timeline-item__year">{{ entry.year }}</span>
+          {% for lang in "zh,en,ja" | split: "," %}
+          <div class="lang-{{ lang }}">
+            <h4 class="timeline-item__title">{{ entry[lang].title }}</h4>
+            <p class="timeline-item__detail">{{ entry[lang].detail }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Timeline tab filtering
+  (function() {
+    function init() {
+      var tabs = document.querySelectorAll('.timeline-tab');
+      var items = document.querySelectorAll('.timeline-item');
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var cat = this.getAttribute('data-category');
+          tabs.forEach(function(t) { t.classList.remove('active'); });
+          this.classList.add('active');
+          items.forEach(function(item) {
+            if (cat === 'all' || item.getAttribute('data-category') === cat) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

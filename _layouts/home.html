@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+
+  {% include hero.html %}
+
+  {% include research_cards.html %}
+
+  <!-- Selected Research -->
+  <section class="selected-research-section">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].section_selected_research }}</span>
+        {% endfor %}
+      </h2>
+      <div class="selected-research">
+        {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+        {% for post in sorted_pubs limit: 3 %}
+          {% include publication_entry.html %}
+        {% endfor %}
+      </div>
+      <div class="selected-research__more" data-reveal>
+        <a href="{{ base_path }}/publications/" class="btn-link">
+          {% for lang in "zh,en,ja" | split: "," %}
+          <span class="lang-{{ lang }}">{{ site.data.languages[lang].selected_research_view_all }}</span>
+          {% endfor %}
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {% include timeline.html %}
+
+</div>

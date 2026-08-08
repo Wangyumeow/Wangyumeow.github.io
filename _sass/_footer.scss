@@ -1,0 +1,43 @@
+// ============================================
+// _footer.scss
+// Page Footer
+// ============================================
+
+.page__footer {
+  background-color: var(--color-navy-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: var(--space-2xl) 0;
+  margin-top: var(--space-4xl);
+
+  footer {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    text-align: center;
+  }
+
+  a {
+    color: var(--color-gold-light);
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
+
+.page__footer-copyright {
+  font-size: 0.85rem;
+  line-height: 1.8;
+
+  span {
+    display: inline;
+  }
+
+  br + span {
+    display: block;
+    margin-top: var(--space-xs);
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+}

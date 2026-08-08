@@ -1,0 +1,93 @@
+# Research areas — trilingual data
+# ====================================
+
+areas:
+  - id: "01"
+    icon: "fa-solid fa-landmark"
+    zh:
+      title: "日本政治"
+      subtitle: "Japan Politics"
+      description: "研究日本政党政治、自民党派阀政治、内阁形成以及政治传播。聚焦日本政治右倾化与媒体生态变迁的关联。"
+      questions:
+        - "自民党派阀政治是否延续？"
+        - "日本政治传播如何变化？"
+      current_projects: "正在研究2026年日本众议院选举中的媒体生态变化与政治动员，探讨传统媒体公信力下降与社交媒体崛起的关联。"
+      future: "未来将深入比较日本与其他东亚国家的政治传播模式，关注数字时代政治极化趋势。"
+    en:
+      title: "Japan Politics"
+      subtitle: "日本政治"
+      description: "Research on Japanese party politics, LDP faction dynamics, cabinet formation, and political communication. Focus on the relationship between Japan's political rightward shift and media ecosystem changes."
+      questions:
+        - "Does LDP faction politics continue?"
+        - "How does Japanese political communication change?"
+      current_projects: "Currently researching media ecosystem changes and political mobilization in the 2026 Japanese general election, examining the link between declining trust in traditional media and the rise of social media."
+      future: "Future research will compare political communication models between Japan and other East Asian countries, with attention to political polarization in the digital age."
+    ja:
+      title: "日本政治"
+      subtitle: "Japan Politics"
+      description: "日本の政党政治、自民党の派閥政治、内閣形成、および政治コミュニケーションを研究する。日本政治の右傾化とメディアエコシステムの変容の関連に焦点を当てる。"
+      questions:
+        - "自民党の派閥政治は継続するか？"
+        - "日本の政治コミュニケーションはどう変化するか？"
+      current_projects: "2026年衆議院選挙におけるメディアエコシステムの変化と政治的動員を研究中。伝統メディアの信頼低下とソーシャルメディアの台頭の関連を検討。"
+      future: "今後は日本と他の東アジア諸国の政治コミュニケーションモデルを比較研究し、デジタル時代の政治的二極化の動向に注目する予定。"
+
+  - id: "02"
+    icon: "fa-solid fa-globe"
+    zh:
+      title: "全球治理"
+      subtitle: "Global Governance"
+      description: "研究联合国改革、多边主义、国际组织以及全球治理机制。关注跨国城市网络在气候治理中的作用。"
+      questions:
+        - "联合国安理会改革的前景如何？"
+        - "多边主义在数字时代如何演进？"
+      current_projects: "已完成对C40与全球市长联盟（GCoM）的比较研究，探讨跨国城市网络在气候治理中的发展差异。"
+      future: "未来将扩展至数字治理与人工智能全球治理领域，研究新兴技术对全球治理架构的影响。"
+    en:
+      title: "Global Governance"
+      subtitle: "全球治理"
+      description: "Research on UN reform, multilateralism, international organizations, and global governance mechanisms. Focus on the role of transnational city networks in climate governance."
+      questions:
+        - "What are the prospects for UN Security Council reform?"
+        - "How does multilateralism evolve in the digital age?"
+      current_projects: "Completed a comparative study of C40 and the Global Covenant of Mayors (GCoM), examining development differences of transnational city networks in climate governance."
+      future: "Future research will extend to digital governance and AI global governance, examining how emerging technologies reshape global governance architectures."
+    ja:
+      title: "グローバル・ガバナンス"
+      subtitle: "Global Governance"
+      description: "国連改革、多国間主義、国際機関、およびグローバル・ガバナンスのメカニズムを研究する。気候ガバナンスにおける越境都市ネットワークの役割に焦点を当てる。"
+      questions:
+        - "国連安全保障理事会改革の見通しは？"
+        - "デジタル時代において多国間主義はどう進化するか？"
+      current_projects: "C40と世界首長誓約（GCoM）の比較研究を完了。気候ガバナンスにおける越境都市ネットワークの発展差異を検討。"
+      future: "今後はデジタル・ガバナンスとAIのグローバル・ガバナンス分野に拡張し、新興技術がグローバル・ガバナンス体制に与える影響を研究する予定。"
+
+  - id: "03"
+    icon: "fa-solid fa-broadcast-tower"
+    zh:
+      title: "政治传播"
+      subtitle: "Political Communication"
+      description: "研究数字媒体时代政治传播、国家形象建构与国际传播。关注社交媒体对政治动员的影响。"
+      questions:
+        - "数字媒体如何改变政治传播？"
+        - "国家形象如何在国际传播中被建构？"
+      current_projects: "以2026年日本众议院选举为案例，研究社交媒体政治动员与传统媒体公信力下降的关联。"
+      future: "未来将比较中日两国在国际传播中的国家形象建构策略，探索数字外交的新范式。"
+    en:
+      title: "Political Communication"
+      subtitle: "政治传播"
+      description: "Research on digital media political communication, national image construction, and international communication. Focus on the impact of social media on political mobilization."
+      questions:
+        - "How does digital media transform political communication?"
+        - "How is national image constructed in international communication?"
+      current_projects: "Using the 2026 Japanese general election as a case study, researching the link between social media political mobilization and declining trust in traditional media."
+      future: "Future research will compare national image construction strategies in international communication between China and Japan, exploring new paradigms of digital diplomacy."
+    ja:
+      title: "政治コミュニケーション"
+      subtitle: "Political Communication"
+      description: "デジタルメディア時代の政治コミュニケーション、国家イメージの構築、国際コミュニケーションを研究する。ソーシャルメディアが政治的動員に与える影響に焦点を当てる。"
+      questions:
+        - "デジタルメディアは政治コミュニケーションをどう変えるか？"
+        - "国家イメージは国際コミュニケーションにおいてどう構築されるか？"
+      current_projects: "2026年衆議院選挙を事例に、ソーシャルメディアによる政治的動員と伝統メディアの信頼低下の関連を研究。"
+      future: "今後は中国と日本の国際コミュニケーションにおける国家イメージ構築戦略を比較し、デジタル外交の新たなパラダイムを探求する予定。"

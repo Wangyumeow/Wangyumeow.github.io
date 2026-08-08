@@ -1,0 +1,57 @@
+{% comment %}
+  Renders a single publication entry for the publications list.
+  Usage: {% include publication_entry.html %}
+  Expects `post` to be the current publication in a loop.
+{% endcomment %}
+
+{% include base_path %}
+
+{% assign cat_key = 'publications_category_' | append: post.category %}
+
+<article class="pub-entry" data-reveal>
+  <div class="pub-entry__meta">
+    <span class="pub-entry__date">{{ post.date | date: "%Y.%m" }}</span>
+    {% if post.category %}
+    <span class="pub-entry__category pub-entry__category--{{ post.category }}">
+      {% for lang in "zh,en,ja" | split: "," %}
+      <span class="lang-{{ lang }}">{{ site.data.languages[lang][cat_key] }}</span>
+      {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+
+  <div class="pub-entry__body">
+    <h3 class="pub-entry__title">
+      {{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+    </h3>
+
+    <div class="pub-entry__venue">
+      {{ post.venue | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+    </div>
+
+    <div class="pub-entry__excerpt">
+      {{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+    </div>
+
+    {% if post.citation %}
+    <div class="pub-entry__citation">
+      {{ post.citation | markdownify | remove: "<p>" | remove: "</p>" | strip }}
+    </div>
+    {% endif %}
+
+    <div class="pub-entry__links">
+      {% if post.paperurl %}
+      <a href="{{ post.paperurl }}" class="pub-entry__link" target="_blank">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_pdf_label }}</span>
+        {% endfor %}
+      </a>
+      {% endif %}
+      <a href="{{ post.url | prepend: base_path }}" class="pub-entry__link">
+        {% for lang in "zh,en,ja" | split: "," %}
+        <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_abstract_label }}</span>
+        {% endfor %}
+      </a>
+    </div>
+  </div>
+</article>

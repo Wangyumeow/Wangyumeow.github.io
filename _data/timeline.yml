@@ -1,0 +1,115 @@
+# Academic timeline — trilingual data
+# ====================================
+
+entries:
+  # --- Education ---
+  - year: "2025 – 2028"
+    category: "education"
+    zh:
+      title: "复旦大学"
+      detail: "国际政治—国际传播，硕士（学术学位）。推荐免试入学，国际关系与公共事务学院与国际传播与全球领导力学院联合培养。"
+    en:
+      title: "Fudan University"
+      detail: "M.A. in International Politics and International Communication. Admitted via recommendation exemption; jointly trained by SIRPA and SICGL."
+    ja:
+      title: "復旦大学"
+      detail: "国際政治・国際コミュニケーション専攻、修士（学術学位）。推薦免試入学、国際関係・公共事務学院と国際コミュニケーション・グローバルリーダーシップ学院の共同養成。"
+
+  - year: "2021 – 2025"
+    category: "education"
+    zh:
+      title: "复旦大学"
+      detail: "国际政治（辅修新闻学），本科（法学学士）。优秀学生二等奖学金×1、三等奖学金×2；复旦大学优秀学生、优秀毕业生。"
+    en:
+      title: "Fudan University"
+      detail: "B.A. in International Politics (Minor in Journalism). Second-Class Scholarship x1, Third-Class Scholarship x2; Outstanding Student and Outstanding Graduate."
+    ja:
+      title: "復旦大学"
+      detail: "国際政治専攻（新聞学副専攻）、学士（法学士）。優秀学生二等奨学金×1、三等奨学金×2；復旦大学優秀学生、優秀卒業生。"
+
+  # --- Research ---
+  - year: "2026.05"
+    category: "research"
+    zh:
+      title: "评论文章发表"
+      detail: "与导师合作的《日本积极设定防卫费增额目标的三大动因》刊于《新民晚报》"新民环球/论坛"版。"
+    en:
+      title: "Commentary Published"
+      detail: "Co-authored commentary on Japan's defense spending goals published in Xinmin Evening News."
+    ja:
+      title: "論評掲載"
+      detail: "指導教員との共著論評「日本の防衛費増額目標の三大要因」が『新民晩報』に掲載。"
+
+  - year: "2026.03"
+    category: "research"
+    zh:
+      title: "会议论文获奖"
+      detail: "《日本右倾化与媒体不信任：从传统媒体到社交媒体的动员》获第二届京津冀日本学研究硕博论坛三等奖。"
+    en:
+      title: "Conference Paper Awarded"
+      detail: "\"Japan's Rightward Shift and Media Distrust\" won Third Prize at the 2nd Beijing-Tianjin-Hebei Graduate Forum on Japanese Studies."
+    ja:
+      title: "学会論文受賞"
+      detail: "「日本の右傾化とメディア不信」が第2回京津冀日本学研究大学院生フォーラムで三等賞受賞。"
+
+  - year: "2025.06"
+    category: "research"
+    zh:
+      title: "本科毕业论文"
+      detail: "完成《气候治理中的跨国城市网络的发展差异研究——对C40与全球市长联盟的比较》。"
+    en:
+      title: "Undergraduate Thesis"
+      detail: "Completed thesis on transnational city networks in climate governance: A comparison of C40 and GCoM."
+    ja:
+      title: "学士論文"
+      detail: "「気候ガバナンスにおける越境都市ネットワークの発展差異——C40と世界首長誓約の比較」を完成。"
+
+  # --- International Exchange ---
+  - year: "2024.11"
+    category: "exchange"
+    zh:
+      title: "香港贸易发展局"
+      detail: "第八届中国国际进口博览会香港馆商贸对接，累计对接40+人次，服务时长60小时。"
+    en:
+      title: "HKTDC"
+      detail: "Business liaison at the 8th CIIE Hong Kong Pavilion. Assisted 40+ clients, 60 service hours."
+    ja:
+      title: "香港貿易発展局"
+      detail: "第8回進博会香港パビリオンにて商務連絡担当。延べ40名以上の接客、60時間のサービス提供。"
+
+  - year: "2022.08"
+    category: "exchange"
+    zh:
+      title: "澜沧江-湄公河青年创新治理大赛"
+      detail: "会务组嘉宾组志愿者，负责与老挝国立大学嘉宾的沟通与会务协调。"
+    en:
+      title: "YICMG"
+      detail: "Volunteer at the Lancang-Mekong Youth Innovation Governance Competition. Coordinated with National University of Laos guests."
+    ja:
+      title: "瀾滄江・メコン若者イノベーション・ガバナンス大会"
+      detail: "運営スタッフとしてラオス国立大学のゲストとの連絡・調整を担当。"
+
+  # --- Academic Activities ---
+  - year: "2026.03 – 2026.07"
+    category: "activities"
+    zh:
+      title: "复旦大学国务学院"
+      detail: "科研中心与党务中心助理，协助科研服务与国家社科基金项目申报。"
+    en:
+      title: "SIRPA, Fudan University"
+      detail: "Research & Party Affairs Assistant. Assisted with research services and National Social Science Fund applications."
+    ja:
+      title: "復旦大学国際関係・公共事務学院"
+      detail: "研究・党務アシスタント。研究サービスおよび国家社会科学基金プロジェクト申請の補助。"
+
+  - year: "2025.06 – Present"
+    category: "activities"
+    zh:
+      title: "复旦大学融媒体中心"
+      detail: "视频部记者/策划，策划"旦问研究所"品牌栏目。"
+    en:
+      title: "Converged Media Center, Fudan University"
+      detail: "Video Journalist/Producer. Planned the \"Danwen Institute\" brand series."
+    ja:
+      title: "復旦大学コンバージドメディアセンター"
+      detail: "映像部門記者/プロデューサー。「旦問研究所」ブランド企画を担当。"

@@ -1,36 +1,70 @@
 ---
-layout: archive
-title: '<span class="lang-zh">学术成果</span><span class="lang-en">Publications</span><span class="lang-ja">研究業績</span>'
+layout: single
+title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<!-- Category filter -->
+<div class="pub-filter" data-reveal>
+  <button class="pub-filter__btn active" data-category="all">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_category_all }}</span>
     {% endfor %}
+  </button>
+  <button class="pub-filter__btn" data-category="books">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_category_books }}</span>
+    {% endfor %}
+  </button>
+  <button class="pub-filter__btn" data-category="manuscripts">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_category_manuscripts }}</span>
+    {% endfor %}
+  </button>
+  <button class="pub-filter__btn" data-category="conferences">
+    {% for lang in "zh,en,ja" | split: "," %}
+    <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_category_conferences }}</span>
+    {% endfor %}
+  </button>
+</div>
+
+<!-- Publication list -->
+<div class="pub-list">
+  {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+  {% for post in sorted_pubs %}
+  <div class="pub-wrapper" data-category="{{ post.category }}" data-reveal>
+    {% include publication_entry.html %}
+  </div>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+</div>
 
-
-
+<script>
+  (function() {
+    function init() {
+      var btns = document.querySelectorAll('.pub-filter__btn');
+      var items = document.querySelectorAll('.pub-wrapper');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var cat = this.getAttribute('data-category');
+          btns.forEach(function(b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          items.forEach(function(item) {
+            if (cat === 'all' || item.getAttribute('data-category') === cat) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

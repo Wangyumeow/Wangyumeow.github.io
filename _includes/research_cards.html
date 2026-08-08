@@ -1,0 +1,30 @@
+{% include base_path %}
+
+<section class="research-section" id="research-interests">
+  <div class="container">
+    <h2 class="section-title" data-reveal>
+      {% for lang in "zh,en,ja" | split: "," %}
+      <span class="lang-{{ lang }}">{{ site.data.languages[lang].section_research_interests }}</span>
+      {% endfor %}
+    </h2>
+    <div class="research-cards">
+      {% for area in site.data.research.areas %}
+      <div class="research-card" data-reveal>
+        <div class="research-card__header">
+          <span class="research-card__number">{{ area.id }}</span>
+          {% if area.icon %}
+          <i class="research-card__icon {{ area.icon }}"></i>
+          {% endif %}
+        </div>
+        {% for lang in "zh,en,ja" | split: "," %}
+        <div class="lang-{{ lang }} research-card__body">
+          <h3 class="research-card__title">{{ area[lang].title }}</h3>
+          <p class="research-card__subtitle">{{ area[lang].subtitle }}</p>
+          <p class="research-card__desc">{{ area[lang].description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

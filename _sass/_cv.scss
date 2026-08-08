@@ -1,0 +1,124 @@
+// ============================================
+// _cv.scss
+// CV Page Sections & Download Button
+// ============================================
+
+.cv-download {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px 28px;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    background-color: var(--color-navy-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  i {
+    font-size: 1.1rem;
+  }
+}
+
+.cv-section {
+  margin-bottom: var(--space-3xl);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cv-section__title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-gold);
+  }
+}
+
+.cv-entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border-light);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cv-entry__period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  font-family: var(--font-mono);
+  padding-top: 2px;
+}
+
+.cv-entry__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: 2px;
+}
+
+.cv-entry__org {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.cv-entry__detail {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.cv-entry--pub {
+  .cv-entry__title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-entry {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  .cv-entry__period {
+    padding-top: 0;
+  }
+}

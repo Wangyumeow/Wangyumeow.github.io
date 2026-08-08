@@ -1,0 +1,168 @@
+# 日本語 — UI文字列とコンテンツ
+# ====================================
+
+# Site
+site_title: "王宇傲 Wang Yu'ao"
+site_description: "国際関係研究者 | 復旦大学"
+site_author: "王宇傲"
+
+# Navigation
+nav_home: "ホーム"
+nav_about: "概要"
+nav_research: "研究"
+nav_publications: "研究業績"
+nav_cv: "履歴書"
+nav_blog: "アカデミック・ノート"
+
+# Language switcher
+lang_zh_name: "中文"
+lang_en_name: "EN"
+lang_ja_name: "日"
+
+# Hero Section
+hero_name: "王宇傲"
+hero_name_native: "Yu'ao Wang"
+hero_title: "国際関係研究者"
+hero_affiliation: "復旦大学"
+hero_subtitle: "国際政治・国際コミュニケーション専攻 修士課程"
+hero_area_label: "研究分野"
+hero_area_1: "日本政治"
+hero_area_2: "グローバル・ガバナンス"
+hero_area_3: "政治コミュニケーション"
+
+# Home — Research Interests
+section_research_interests: "研究分野"
+research_01_title: "日本政治"
+research_01_subtitle: "Japan Politics"
+research_01_desc: "日本の政党政治、自民党の派閥政治、内閣形成、および政治コミュニケーションを研究する。"
+research_02_title: "グローバル・ガバナンス"
+research_02_subtitle: "Global Governance"
+research_02_desc: "国連改革、多国間主義、国際機関、およびグローバル・ガバナンスのメカニズムを研究する。"
+research_03_title: "政治コミュニケーション"
+research_03_subtitle: "Political Communication"
+research_03_desc: "デジタルメディア時代の政治コミュニケーション、国家イメージの構築、国際コミュニケーションを研究する。"
+
+# Home — Selected Research
+section_selected_research: "精選研究"
+selected_research_view_all: "研究業績一覧を見る"
+
+# Home — Academic Timeline
+section_timeline: "アカデミック・タイムライン"
+timeline_education: "学歴"
+timeline_research: "研究経験"
+timeline_exchange: "国際交流"
+timeline_activities: "学術活動"
+
+# About Page
+about_title: "概要"
+about_bio_label: "自己紹介"
+about_education_label: "学歴"
+about_research_interests_label: "研究関心"
+about_interdisciplinary_label: "学際的経験"
+about_languages_label: "語学力"
+about_skills_label: "専門スキル"
+
+about_bio: |
+  王宇傲（ワン・ユーアオ）は、復旦大学国際政治・国際コミュニケーション専攻の修士課程大学院生（2025–2028）です。国際関係・公共事務学院と国際コミュニケーション・グローバルリーダーシップ学院の共同養成プログラムに推薦免試で入学しました。
+
+  主な研究関心は日本研究とグローバル・ガバナンスの2つの分野です。日本の国際コミュニケーション、日本の国内・国際政治、環境と国際政治、国際コミュニケーションの言説と国家イメージなどを研究テーマとしています。
+
+  復旦大学国際政治専攻（新聞学副専攻）を卒業。復旦大学優秀学生、優秀卒業生の栄誉を受賞しています。
+
+about_education_items:
+  - period: "2025.09 – 2028.06"
+    degree: "国際政治・国際コミュニケーション専攻、修士（学術学位）"
+    institution: "復旦大学"
+    detail: "国際関係・公共事務学院と国際コミュニケーション・グローバルリーダーシップ学院の共同養成。推薦免試入学。"
+  - period: "2021.09 – 2025.06"
+    degree: "国際政治専攻（新聞学副専攻）、学士（法学士）"
+    institution: "復旦大学"
+    detail: "優秀学生二等奨学金×1、三等奨学金×2。復旦大学優秀学生、優秀卒業生。"
+
+about_interest_items:
+  - name: "日本研究"
+    desc: "日本の国際コミュニケーション、日本の国内・国際政治"
+  - name: "グローバル・ガバナンス"
+    desc: "環境と国際政治、国際コミュニケーションの言説と国家イメージ"
+
+about_interdisciplinary: |
+  国際政治と新聞学の学際的な知識体系を持つ。メディア運営（復旦大学コンバージドメディアセンター）、行政・党務（復旦大学国際関係・公共事務学院）、国際業務（香港貿易発展局・進博会）など多岐にわたる実務経験がある。
+
+about_languages_items:
+  - name: "中国語"
+    level: "母語"
+  - name: "英語"
+    level: "CET-6（流暢）"
+  - name: "日本語"
+    level: "中級（JLPT N2同等）"
+
+about_skills_items:
+  - "Adobeシリーズ：Premiere Pro、After Effects、Photoshop、Illustrator、Audition"
+  - "オフィスツール：MS Office、Canva、CapCut"
+  - "AIGCツール活用"
+  - "プロジェクト管理"
+
+# Research Page
+research_page_title: "研究"
+research_page_intro: |
+  私の研究は、日本政治、グローバル・ガバナンス、政治コミュニケーションの交差点を考察します。以下は3つの主要な研究分野であり、それぞれに中心的な研究問い、現在のプロジェクト、今後の展望が含まれています。
+research_questions_label: "研究問い"
+research_current_projects_label: "現在のプロジェクト"
+research_publications_label: "関連業績"
+research_future_label: "今後の展望"
+
+# Publications Page
+publications_title: "研究業績"
+publications_abstract_label: "要旨"
+publications_keywords_label: "キーワード"
+publications_status_label: "状態"
+publications_date_label: "日付"
+publications_pdf_label: "PDFをダウンロード"
+publications_citation_label: "引用"
+publications_category_all: "全て"
+publications_category_books: "書籍・新聞"
+publications_category_manuscripts: "学術論文"
+publications_category_conferences: "学会論文"
+publications_status_published: "掲載済み"
+publications_status_in_preparation: "投稿準備中"
+publications_status_completed: "完了"
+publications_status_awarded: "受賞"
+
+# CV Page
+cv_title: "アカデミックCV"
+cv_download_label: "CVをダウンロード (PDF)"
+cv_education_label: "学歴"
+cv_research_experience_label: "研究経験"
+cv_work_experience_label: "職務経験・インターンシップ"
+cv_publications_label: "研究業績"
+cv_awards_label: "受賞・栄誉"
+cv_conferences_label: "学会"
+cv_exchange_label: "交流経験"
+cv_campus_activities_label: "課外活動"
+cv_skills_label: "スキル"
+
+# Blog Page
+blog_title: "アカデミック・ノート"
+blog_subtitle: "研究ノート、書評、政策分析、学会記録。"
+blog_category_all: "全て"
+blog_category_research: "研究ノート"
+blog_category_reviews: "書評"
+blog_category_policy: "政策分析"
+blog_category_conference: "学会ノート"
+blog_no_posts: "記事はまだありません。お楽しみに。"
+
+# Footer
+footer_copyright: "王宇傲"
+footer_powered_by: "Powered by Jekyll"
+footer_last_updated: "最終更新"
+
+# 404
+error_404_title: "ページが見つかりません"
+error_404_message: "お探しのページは存在しません。"
+error_404_back: "ホームに戻る"
+
+# Contact
+contact_title: "連絡先"
+contact_email_label: "メール"
+contact_location_label: "所在地"
+contact_location_value: "上海"

@@ -1,0 +1,74 @@
+// ============================================
+// _layout.scss
+// Container, Page Wrapper, Grid
+// ============================================
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+#main {
+  min-height: calc(100vh - var(--header-height) - 200px);
+  padding-top: var(--header-height);
+}
+
+.page {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--container-padding);
+}
+
+.page__inner-wrap {
+  width: 100%;
+}
+
+.page__header {
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.page__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0;
+  position: relative;
+  padding-bottom: var(--space-md);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: var(--radius-sm);
+  }
+}
+
+.page__content {
+  line-height: 1.8;
+
+  > section {
+    margin-bottom: var(--space-3xl);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: var(--space-xl) var(--container-padding);
+  }
+
+  .page__title {
+    font-size: 1.5rem;
+  }
+}

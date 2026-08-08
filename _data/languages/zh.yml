@@ -1,0 +1,168 @@
+# 中文 — UI 字符串与内容
+# ====================================
+
+# Site
+site_title: "王宇傲"
+site_description: "国际关系研究者 | 复旦大学"
+site_author: "王宇傲"
+
+# Navigation
+nav_home: "首页"
+nav_about: "关于"
+nav_research: "研究"
+nav_publications: "学术成果"
+nav_cv: "简历"
+nav_blog: "学术笔记"
+
+# Language switcher
+lang_zh_name: "中文"
+lang_en_name: "EN"
+lang_ja_name: "日"
+
+# Hero Section
+hero_name: "王宇傲"
+hero_name_native: "Yu'ao Wang"
+hero_title: "国际关系研究者"
+hero_affiliation: "复旦大学"
+hero_subtitle: "国际政治—国际传播硕士研究生"
+hero_area_label: "研究方向"
+hero_area_1: "日本政治"
+hero_area_2: "全球治理"
+hero_area_3: "政治传播"
+
+# Home — Research Interests
+section_research_interests: "研究方向"
+research_01_title: "日本政治"
+research_01_subtitle: "Japan Politics"
+research_01_desc: "研究日本政党政治、自民党派阀政治、内阁形成以及政治传播。"
+research_02_title: "全球治理"
+research_02_subtitle: "Global Governance"
+research_02_desc: "研究联合国改革、多边主义、国际组织以及全球治理机制。"
+research_03_title: "政治传播"
+research_03_subtitle: "Political Communication"
+research_03_desc: "研究数字媒体时代政治传播、国家形象建构与国际传播。"
+
+# Home — Selected Research
+section_selected_research: "精选研究"
+selected_research_view_all: "查看全部学术成果"
+
+# Home — Academic Timeline
+section_timeline: "学术时间线"
+timeline_education: "教育经历"
+timeline_research: "研究经历"
+timeline_exchange: "国际交流"
+timeline_activities: "学术活动"
+
+# About Page
+about_title: "关于"
+about_bio_label: "个人简介"
+about_education_label: "教育背景"
+about_research_interests_label: "研究兴趣"
+about_interdisciplinary_label: "跨学科背景"
+about_languages_label: "语言能力"
+about_skills_label: "专业技能"
+
+about_bio: |
+  王宇傲，复旦大学国际政治—国际传播专业硕士研究生（2025–2028），由国际关系与公共事务学院（学籍单位）与国际传播与全球领导力学院（培养单位）联合培养，推荐免试入学。
+
+  主要研究兴趣聚焦于日本问题与国际治理议题两个方向：日本问题研究（日本的国际传播、日本国内与国际政治）；国际治理议题研究（环境与国际政治、国际传播话语与国家形象）。
+
+  本科毕业于复旦大学国际政治专业（辅修新闻学），曾获复旦大学优秀学生、优秀毕业生等荣誉。
+
+about_education_items:
+  - period: "2025.09 – 2028.06"
+    degree: "国际政治—国际传播，硕士（学术学位）"
+    institution: "复旦大学"
+    detail: "国际关系与公共事务学院与国际传播与全球领导力学院联合培养，推荐免试入学。"
+  - period: "2021.09 – 2025.06"
+    degree: "国际政治（辅修新闻学），本科（法学学士）"
+    institution: "复旦大学"
+    detail: "优秀学生二等奖学金×1、三等奖学金×2；复旦大学优秀学生、优秀毕业生。"
+
+about_interest_items:
+  - name: "日本问题研究"
+    desc: "日本的国际传播、日本国内与国际政治"
+  - name: "国际治理议题研究"
+    desc: "环境与国际政治、国际传播话语与国家形象"
+
+about_interdisciplinary: |
+  兼具国际政治与新闻学跨学科知识体系。实践经验涵盖媒体运营（复旦大学党委宣传部融媒体中心）、行政党务（复旦大学国务学院）及国际事务（香港贸易发展局进博会项目）等领域。
+
+about_languages_items:
+  - name: "中文"
+    level: "母语"
+  - name: "英语"
+    level: "CET-6（流利）"
+  - name: "日语"
+    level: "中级（JLPT N2同等水平）"
+
+about_skills_items:
+  - "Adobe 系列：Premiere Pro、After Effects、Photoshop、Illustrator、Audition"
+  - "办公工具：MS Office、Canva、剪映"
+  - "AIGC 工具使用"
+  - "项目管理"
+
+# Research Page
+research_page_title: "研究"
+research_page_intro: |
+  我的研究聚焦于日本政治、全球治理与政治传播的交叉领域。以下是三个主要研究方向，每个方向包含核心研究问题、当前项目及未来展望。
+research_questions_label: "研究问题"
+research_current_projects_label: "当前项目"
+research_publications_label: "相关成果"
+research_future_label: "未来展望"
+
+# Publications Page
+publications_title: "学术成果"
+publications_abstract_label: "摘要"
+publications_keywords_label: "关键词"
+publications_status_label: "状态"
+publications_date_label: "日期"
+publications_pdf_label: "下载 PDF"
+publications_citation_label: "引用"
+publications_category_all: "全部"
+publications_category_books: "书籍与报刊"
+publications_category_manuscripts: "学术论文"
+publications_category_conferences: "会议论文"
+publications_status_published: "已发表"
+publications_status_in_preparation: "投稿准备中"
+publications_status_completed: "已完成"
+publications_status_awarded: "获奖"
+
+# CV Page
+cv_title: "学术简历"
+cv_download_label: "下载简历 (PDF)"
+cv_education_label: "教育背景"
+cv_research_experience_label: "研究经历"
+cv_work_experience_label: "工作与实习经历"
+cv_publications_label: "学术成果"
+cv_awards_label: "奖项与荣誉"
+cv_conferences_label: "学术会议"
+cv_exchange_label: "交流经历"
+cv_campus_activities_label: "校园经历"
+cv_skills_label: "技能"
+
+# Blog Page
+blog_title: "学术笔记"
+blog_subtitle: "研究笔记、书评、政策分析与会议记录。"
+blog_category_all: "全部"
+blog_category_research: "研究笔记"
+blog_category_reviews: "书评"
+blog_category_policy: "政策分析"
+blog_category_conference: "会议笔记"
+blog_no_posts: "暂无文章，敬请期待。"
+
+# Footer
+footer_copyright: "王宇傲"
+footer_powered_by: "本站基于 Jekyll 构建"
+footer_last_updated: "最后更新"
+
+# 404
+error_404_title: "页面未找到"
+error_404_message: "您访问的页面不存在。"
+error_404_back: "返回首页"
+
+# Contact
+contact_title: "联系方式"
+contact_email_label: "邮箱"
+contact_location_label: "所在地"
+contact_location_value: "上海"
