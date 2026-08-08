@@ -1,4 +1,5 @@
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -7,7 +8,7 @@
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
             <a href="{{ base_path }}/">
-              {% for lang in "zh,en,ja" | split: "," %}
+              {% for lang in langs %}
               <span class="lang-{{ lang }}">{{ site.data.languages[lang].site_title }}</span>
               {% endfor %}
             </a>
@@ -20,7 +21,7 @@
             {% endif %}
             <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">
-                {% for lang in "zh,en,ja" | split: "," %}
+                {% for lang in langs %}
                 <span class="lang-{{ lang }}">{{ site.data.languages[lang][link.key] }}</span>
                 {% endfor %}
               </a>

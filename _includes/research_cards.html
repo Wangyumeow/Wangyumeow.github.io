@@ -1,9 +1,10 @@
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <section class="research-section" id="research-interests">
   <div class="container">
     <h2 class="section-title" data-reveal>
-      {% for lang in "zh,en,ja" | split: "," %}
+      {% for lang in langs %}
       <span class="lang-{{ lang }}">{{ site.data.languages[lang].section_research_interests }}</span>
       {% endfor %}
     </h2>
@@ -16,7 +17,7 @@
           <i class="research-card__icon {{ area.icon }}"></i>
           {% endif %}
         </div>
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <div class="lang-{{ lang }} research-card__body">
           <h3 class="research-card__title">{{ area[lang].title }}</h3>
           <p class="research-card__subtitle">{{ area[lang].subtitle }}</p>

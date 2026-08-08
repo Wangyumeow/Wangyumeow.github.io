@@ -1,36 +1,37 @@
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <section class="hero" id="hero">
   <div class="hero__inner">
     <div class="hero__content" data-reveal>
       <h1 class="hero__name">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].hero_name }}</span>
         {% endfor %}
       </h1>
       <p class="hero__title">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].hero_title }}</span>
         {% endfor %}
       </p>
       <p class="hero__affiliation">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].hero_affiliation }}</span>
         {% endfor %}
       </p>
       <p class="hero__subtitle">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].hero_subtitle }}</span>
         {% endfor %}
       </p>
       <div class="hero__areas">
         <p class="hero__areas-label">
-          {% for lang in "zh,en,ja" | split: "," %}
+          {% for lang in langs %}
           <span class="lang-{{ lang }}">{{ site.data.languages[lang].hero_area_label }}</span>
           {% endfor %}
         </p>
         <ul class="hero__areas-list">
-          {% for lang in "zh,en,ja" | split: "," %}
+          {% for lang in langs %}
           <li class="lang-{{ lang }}">{{ site.data.languages[lang].hero_area_1 }} &middot; {{ site.data.languages[lang].hero_area_2 }} &middot; {{ site.data.languages[lang].hero_area_3 }}</li>
           {% endfor %}
         </ul>

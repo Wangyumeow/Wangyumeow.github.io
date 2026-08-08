@@ -6,15 +6,16 @@ author_profile: false
 ---
 
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <!-- Biography -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].about_bio_label }}</span>
     {% endfor %}
   </h2>
-  {% for lang in "zh,en,ja" | split: "," %}
+  {% for lang in langs %}
   <div class="lang-{{ lang }} about-section__bio">
     {{ site.data.languages[lang].about_bio | markdownify }}
   </div>
@@ -24,12 +25,12 @@ author_profile: false
 <!-- Education -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].about_education_label }}</span>
     {% endfor %}
   </h2>
   <div class="education-list">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       {% for item in site.data.languages[lang].about_education_items %}
       <div class="education-item">
@@ -49,12 +50,12 @@ author_profile: false
 <!-- Research Interests -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].about_research_interests_label }}</span>
     {% endfor %}
   </h2>
   <ul class="interest-list">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       {% for item in site.data.languages[lang].about_interest_items %}
       <li class="interest-item">
@@ -69,11 +70,11 @@ author_profile: false
 <!-- Interdisciplinary Experience -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].about_interdisciplinary_label }}</span>
     {% endfor %}
   </h2>
-  {% for lang in "zh,en,ja" | split: "," %}
+  {% for lang in langs %}
   <div class="lang-{{ lang }} about-section__bio">
     {{ site.data.languages[lang].about_interdisciplinary | markdownify }}
   </div>
@@ -83,12 +84,12 @@ author_profile: false
 <!-- Languages -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].about_languages_label }}</span>
     {% endfor %}
   </h2>
   <div class="skills-grid">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       {% for item in site.data.languages[lang].about_languages_items %}
       <div class="skill-chip">
@@ -104,12 +105,12 @@ author_profile: false
 <!-- Technical Skills -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].about_skills_label }}</span>
     {% endfor %}
   </h2>
   <ul class="skills-list">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       {% for skill in site.data.languages[lang].about_skills_items %}
       <li>{{ skill }}</li>
@@ -122,14 +123,14 @@ author_profile: false
 <!-- Contact -->
 <section class="about-section" data-reveal>
   <h2 class="about-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].contact_title }}</span>
     {% endfor %}
   </h2>
   <div class="contact-info">
     <p>
       <strong>
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].contact_email_label }}</span>
         {% endfor %}:
       </strong>
@@ -137,11 +138,11 @@ author_profile: false
     </p>
     <p>
       <strong>
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].contact_location_label }}</span>
         {% endfor %}:
       </strong>
-      {% for lang in "zh,en,ja" | split: "," %}
+      {% for lang in langs %}
       <span class="lang-{{ lang }}">{{ site.data.languages[lang].contact_location_value }}</span>
       {% endfor %}
     </p>

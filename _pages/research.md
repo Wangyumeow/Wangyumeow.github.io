@@ -6,10 +6,11 @@ author_profile: false
 ---
 
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <!-- Intro -->
 <section class="research-intro" data-reveal>
-  {% for lang in "zh,en,ja" | split: "," %}
+  {% for lang in langs %}
   <div class="lang-{{ lang }}">
     {{ site.data.languages[lang].research_page_intro | markdownify }}
   </div>
@@ -24,7 +25,7 @@ author_profile: false
     {% if area.icon %}
     <i class="research-area__icon {{ area.icon }}"></i>
     {% endif %}
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       <h2 class="research-area__title">{{ area[lang].title }}</h2>
       <span class="research-area__subtitle">{{ area[lang].subtitle }}</span>
@@ -32,7 +33,7 @@ author_profile: false
     {% endfor %}
   </div>
 
-  {% for lang in "zh,en,ja" | split: "," %}
+  {% for lang in langs %}
   <div class="lang-{{ lang }} research-area__content">
     <p class="research-area__desc">{{ area[lang].description }}</p>
 
@@ -62,7 +63,7 @@ author_profile: false
 <!-- Related Publications -->
 <section class="research-publications" data-reveal>
   <h2 class="section-title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].research_publications_label }}</span>
     {% endfor %}
   </h2>

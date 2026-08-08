@@ -6,10 +6,11 @@ author_profile: false
 ---
 
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <!-- Subtitle -->
 <div class="blog-intro" data-reveal>
-  {% for lang in "zh,en,ja" | split: "," %}
+  {% for lang in langs %}
   <p class="lang-{{ lang }}">{{ site.data.languages[lang].blog_subtitle }}</p>
   {% endfor %}
 </div>
@@ -17,27 +18,27 @@ author_profile: false
 <!-- Category filter -->
 <div class="blog-filter" data-reveal>
   <button class="blog-filter__btn active" data-category="all">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_all }}</span>
     {% endfor %}
   </button>
   <button class="blog-filter__btn" data-category="research-notes">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_research }}</span>
     {% endfor %}
   </button>
   <button class="blog-filter__btn" data-category="book-reviews">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_reviews }}</span>
     {% endfor %}
   </button>
   <button class="blog-filter__btn" data-category="policy-analysis">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_policy }}</span>
     {% endfor %}
   </button>
   <button class="blog-filter__btn" data-category="conference-notes">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].blog_category_conference }}</span>
     {% endfor %}
   </button>
@@ -61,7 +62,7 @@ author_profile: false
     {% endfor %}
   {% else %}
     <div class="blog-empty" data-reveal>
-      {% for lang in "zh,en,ja" | split: "," %}
+      {% for lang in langs %}
       <p class="lang-{{ lang }}">{{ site.data.languages[lang].blog_no_posts }}</p>
       {% endfor %}
     </div>

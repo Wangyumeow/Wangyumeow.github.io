@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <div id="main" role="main">
 
@@ -14,7 +15,7 @@ layout: default
   <section class="selected-research-section">
     <div class="container">
       <h2 class="section-title" data-reveal>
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].section_selected_research }}</span>
         {% endfor %}
       </h2>
@@ -26,7 +27,7 @@ layout: default
       </div>
       <div class="selected-research__more" data-reveal>
         <a href="{{ base_path }}/publications/" class="btn-link">
-          {% for lang in "zh,en,ja" | split: "," %}
+          {% for lang in langs %}
           <span class="lang-{{ lang }}">{{ site.data.languages[lang].selected_research_view_all }}</span>
           {% endfor %}
           <i class="fa-solid fa-arrow-right"></i>

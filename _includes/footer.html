@@ -1,7 +1,8 @@
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <div class="page__footer-copyright">
-  {% for lang in "zh,en,ja" | split: "," %}
+  {% for lang in langs %}
   <span class="lang-{{ lang }}">&copy; {{ site.time | date: '%Y' }} {{ site.data.languages[lang].footer_copyright }}. {{ site.data.languages[lang].footer_powered_by }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>.</span>
   {% endfor %}
   <br>

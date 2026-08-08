@@ -6,12 +6,13 @@ author_profile: false
 ---
 
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <!-- Download button -->
 <div class="cv-download" data-reveal>
   <a href="{{ base_path }}/files/cv.pdf" class="btn-cv" target="_blank">
     <i class="fa-solid fa-file-pdf"></i>
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_download_label }}</span>
     {% endfor %}
   </a>
@@ -20,12 +21,12 @@ author_profile: false
 <!-- Education -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_education_label }}</span>
     {% endfor %}
   </h2>
   <div class="cv-entries">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       {% for item in site.data.languages[lang].about_education_items %}
       <div class="cv-entry">
@@ -45,7 +46,7 @@ author_profile: false
 <!-- Research Experience -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_research_experience_label }}</span>
     {% endfor %}
   </h2>
@@ -110,7 +111,7 @@ author_profile: false
 <!-- Work & Internship Experience (streamlined) -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_work_experience_label }}</span>
     {% endfor %}
   </h2>
@@ -199,7 +200,7 @@ author_profile: false
 <!-- Publications -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_publications_label }}</span>
     {% endfor %}
   </h2>
@@ -220,7 +221,7 @@ author_profile: false
 <!-- Awards -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_awards_label }}</span>
     {% endfor %}
   </h2>
@@ -276,7 +277,7 @@ author_profile: false
 <!-- Campus Activities -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_campus_activities_label }}</span>
     {% endfor %}
   </h2>
@@ -302,12 +303,12 @@ author_profile: false
 <!-- Skills -->
 <section class="cv-section" data-reveal>
   <h2 class="cv-section__title">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <span class="lang-{{ lang }}">{{ site.data.languages[lang].cv_skills_label }}</span>
     {% endfor %}
   </h2>
   <ul class="skills-list">
-    {% for lang in "zh,en,ja" | split: "," %}
+    {% for lang in langs %}
     <div class="lang-{{ lang }}">
       {% for skill in site.data.languages[lang].about_skills_items %}
       <li>{{ skill }}</li>

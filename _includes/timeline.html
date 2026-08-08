@@ -1,36 +1,37 @@
 {% include base_path %}
+{% assign langs = "zh,en,ja" | split: "," %}
 
 <section class="timeline-section" id="timeline">
   <div class="container">
     <h2 class="section-title" data-reveal>
-      {% for lang in "zh,en,ja" | split: "," %}
+      {% for lang in langs %}
       <span class="lang-{{ lang }}">{{ site.data.languages[lang].section_timeline }}</span>
       {% endfor %}
     </h2>
 
     <div class="timeline-tabs" data-reveal>
       <button class="timeline-tab active" data-category="all">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].publications_category_all }}</span>
         {% endfor %}
       </button>
       <button class="timeline-tab" data-category="education">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_education }}</span>
         {% endfor %}
       </button>
       <button class="timeline-tab" data-category="research">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_research }}</span>
         {% endfor %}
       </button>
       <button class="timeline-tab" data-category="exchange">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_exchange }}</span>
         {% endfor %}
       </button>
       <button class="timeline-tab" data-category="activities">
-        {% for lang in "zh,en,ja" | split: "," %}
+        {% for lang in langs %}
         <span class="lang-{{ lang }}">{{ site.data.languages[lang].timeline_activities }}</span>
         {% endfor %}
       </button>
@@ -42,7 +43,7 @@
         <div class="timeline-item__marker"></div>
         <div class="timeline-item__content">
           <span class="timeline-item__year">{{ entry.year }}</span>
-          {% for lang in "zh,en,ja" | split: "," %}
+          {% for lang in langs %}
           <div class="lang-{{ lang }}">
             <h4 class="timeline-item__title">{{ entry[lang].title }}</h4>
             <p class="timeline-item__detail">{{ entry[lang].detail }}</p>
