@@ -8,6 +8,9 @@
 
   // ---- Scroll Reveal via IntersectionObserver ----
   function initScrollReveal() {
+    // Enable animation CSS (content is visible by default via CSS)
+    document.documentElement.classList.add('reveal-active');
+
     var revealEls = document.querySelectorAll('[data-reveal]');
     if (!revealEls.length) return;
 
