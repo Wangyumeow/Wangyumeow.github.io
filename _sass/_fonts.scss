@@ -1,0 +1,81 @@
+// ============================================
+// _fonts.scss
+// @font-face declarations for custom fonts
+// Hosted locally — no external CDN dependencies
+// ============================================
+
+// ---- Chinese: 方正小标宋简体 (Heading Song) ----
+@font-face {
+  font-family: "FZ XiaoBiaoSong";
+  src: url("../fonts/FZXiaoBiaoSong.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+2010-205F;
+}
+
+// ---- Chinese: 方正新报宋简体 (Body Song) ----
+@font-face {
+  font-family: "FZ XinBaoSong";
+  src: url("../fonts/FZXinBaoSong.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+2010-205F;
+}
+
+// ---- English: Garamond ----
+@font-face {
+  font-family: "Garamond";
+  src: url("../fonts/Garamond-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-017F, U+2000-206F, U+20A0-20CF, U+2100-214F, U+2200-22FF;
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("../fonts/Garamond-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-017F, U+2000-206F, U+20A0-20CF, U+2100-214F, U+2200-22FF;
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("../fonts/Garamond-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-017F, U+2000-206F, U+20A0-20CF, U+2100-214F, U+2200-22FF;
+}
+
+// ---- Japanese: 游明朝 (Yu Mincho) ----
+@font-face {
+  font-family: "Yu Mincho";
+  src: url("../fonts/YuMincho-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303F, U+3040-309F, U+30A0-30FF, U+4E00-9FFF, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: "Yu Mincho";
+  src: url("../fonts/YuMincho-Demibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303F, U+3040-309F, U+30A0-30FF, U+4E00-9FFF, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: "Yu Mincho";
+  src: url("../fonts/YuMincho-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303F, U+3040-309F, U+30A0-30FF, U+4E00-9FFF, U+FF00-FFEF;
+}
